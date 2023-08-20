@@ -1,13 +1,18 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
-  awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+- degree: Ph.D in Chemistry Physics
+  uni: Laboratory of Theoretical Biochemistry, CNRS, France
+  year: Nov, 2019 &mdash; Apr, 2023
+  # awards:
+  summary: Interpretation of experimental data through interactive simulation and molecular visualization
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: Master in Bioinformatics and Modelisation
+  uni: Sorbonne Université, Paris
+  year: 2017 &mdash; Apr, 2019
+  # award: Most likely to succeed
+  summary: Major in structural bioinformatics and modelisation
+
+- degree: Bachelor in Molecular and cellular biology
+  uni: Université Pierre et Marie Curie, Paris
+  year: 2014 &mdash; Apr, 2017
+  # award: 
+  summary: Major in Biology, minors in bioinformatics, modelling, thermodynamics of living systems

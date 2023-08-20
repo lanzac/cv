@@ -1,12 +1,20 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
+# Languages
+- skill: Languages
+  description: French (native), English (proficient)
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Scientific software
+- skill: Scientific software
+  description: VMD, PyMol, APBS, GROMACS, NAMD, HADDOCK, Desmos
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+# Communication
+- skill: Communication
+  description: \(\LaTeX\), Apple/Microsoft office suites, Website design (HTML/CSS), Authorea
+
+# Programming
+- skill: Programming
+  description: Python3, \(\verb!C++11!\), \(\verb!C#!\), Bash, \(\verb!C!\), Unix, 
+
+# Development tools
+- skill: Development tools
+  description: git, lldb, CMake, Unity, Docker, Pixlr E

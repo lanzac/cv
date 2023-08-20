@@ -44,5 +44,20 @@
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_website_url }}" class="icon-link" itemprop="url">{% include icons/icon-website.html %}</a></li>
   {% endif %}
 
+  <!-- ResearchGate link -->
+  {% if site.resume_social_links.resume_researchgate_url %}
+  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_researchgate_url }}" class="icon-link" itemprop="url">{% include icons/icon-researchgate.html %}</a></li>
+  {% endif %}
+
+  <!-- Mail link -->
+  {% if site.resume_social_links.resume_mail_url %}
+  <li class="icon-link-item"><a href="mailto:{{ site.resume_social_links.resume_mail_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-mail.html %}</a></li>
+  {% endif %}
+
+   <!-- Telephone link -->
+   {% if site.resume_social_links.resume_tel %}
+   <li class="icon-link-item"><a href="tel:{{ site.resume_social_links.resume_tel }}" class="icon-link" itemprop="sameAs">{% include icons/icon-tel.html %}</a></li>
+   {% endif %}
+
 </ul>
 {% endif %}
