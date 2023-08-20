@@ -231,24 +231,24 @@
       <!-- end Print Social Links -->
       {% endif %}
 
-      {% if site.resume_softwares %}
-      <!-- begin Software -->
+      {% if site.resume_section_softwares %}
+      <!-- begin softwares -->
       <section class="content-section">
-
         <header class="section-header">
-          <h2>Software development</h2>
+          <h2>Softwares</h2>
         </header>
 
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for interest in site.data.softwares %}
-            <li>{{ interest.description }}</li>
-            {% endfor %}
-          </ul>
+        {% for software in site.data.softwares %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+          <h3 class="resume-item-title" itemprop="name">{{ software.role }}</h3>
+          <h4 class="resume-item-details" itemprop="description">{% if software.url %}<a href="{{ software.url }}" itemprop="url">{{ software.software }}</a>{% else %}{{ software.software }}{% endif %}  &bull; {{ software.duration }}</h4>
+          <p class="resume-item-copy">{{ software.description }}</p>
         </div>
+        {% endfor %}
 
       </section>
-      <!-- end Print Social Links -->
+      <!-- end softwares -->
       {% endif %}
 
       <footer class="page-footer">
