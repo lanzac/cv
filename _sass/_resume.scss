@@ -157,6 +157,12 @@
     }
   }
 
+  .resume-item-publications {
+    @include sans_light;
+    font-family: $mono-font;
+    font-size: 0.7rem;
+  }
+
   .resume-item-title,
   .resume-item-details,
   .resume-item-copy,

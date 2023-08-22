@@ -1,0 +1,35 @@
+# Peer-reviewed publications
+
+# Lanrezac2023b
+- publication: Lanrezac2023b
+  num: 4
+  authors: Lanrezac A, Férey N, Baaden M.
+  title: Interactive Molecular Dynamics
+  journal: Reference Module in Chemistry, Molecular Sciences and Chemical Engineering
+  date: 2023
+  doi: https://doi.org/10.1016/B978-0-12-821978-2.00115-X
+
+
+- publication: Lanrezac2023a
+  num: 3
+  authors: Lanrezac A, Baaden M.
+  title: UNILIPID, a Methodology for Energetically Accurate Prediction of Protein Insertion into Implicit Membranes of Arbitrary Shape
+  journal: Membranes
+  date: 2023
+  doi: https://doi.org/10.3390/membranes13030362
+
+- publication: Lanrezac2022
+  num: 2
+  authors: Lanrezac A, Laurent B, Santuz H, Férey N, Baaden M.
+  title: Fast and Interactive Positioning of Proteins within Membranes
+  journal: Algorithms
+  date: 2022
+  doi: https://doi.org/10.3390/a15110415
+
+- publication: Lanrezac2021
+  num: 1
+  authors: Lanrezac A, Férey N, Baaden M.
+  title: Wielding the power of interactive molecular simulations
+  journal: WIREs Comput Mol Sci
+  date: 2021
+  doi: https://doi.org/10.1002/wcms.1594

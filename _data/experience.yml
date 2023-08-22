@@ -6,10 +6,10 @@
   duration: Nov, 2019 &mdash; Apr, 2023
   summary: >
     <ul class="resume-item-list"> 
-      <li>Exhaustive state-of-the-art analysis - Advanced review centered around interactive molecular simulations (IMS)</li>
+      <li>Exhaustive state-of-the-art analysis - Advanced review centered around interactive molecular simulations (IMS) [1]</li>
       <li>Development of a software suite integrating visualisation and molecular simulation with human interaction</li>
         <ul class="resume-item-list">
-        <li>Application of the protocol for implicit membrane protein insertion.</li>
+        <li>Application of the protocol for implicit membrane protein insertion. [2,3]</li>
         </ul>
     </ul>
     

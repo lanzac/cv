@@ -117,6 +117,23 @@
       <!-- end Projects -->
       {% endif %}
 
+      {% if site.resume_section_publications %}
+      <!-- begin publications -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Peer-reviewed publications</h2>
+        </header>
+
+        {% for publication in site.data.publications %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <h4 class="resume-item-publications" itemprop="description"> {{ publication.num }}. {{ publication.authors }} "<i>{{ publication.title }}</i>" {{ publication.journal }} ({{ publication.date }}) DOI: <a href="{{ publication.doi }}" itemprop="url">{{ publication.doi | replace: 'https://doi.org/', '' }}</a></h4>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end publications -->
+      {% endif %}
+
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
       <section class="content-section">
@@ -175,6 +192,26 @@
       <!-- end Associations -->
       {% endif %}
 
+      {% if site.resume_section_softwares %}
+      <!-- begin softwares -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Softwares</h2>
+        </header>
+
+        {% for software in site.data.softwares %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+          <h3 class="resume-item-title" itemprop="name">{{ software.role }}</h3>
+          <h4 class="resume-item-details" itemprop="description">{% if software.url %}<a href="{{ software.url }}" itemprop="url">{{ software.software }}</a>{% else %}{{ software.software }}{% endif %}  &bull; {{ software.duration }}</h4>
+          <p class="resume-item-copy">{{ software.description }}</p>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end softwares -->
+      {% endif %}
+
       {% if site.resume_section_interests %}
       <!-- begin Interests -->
       <section class="content-section">
@@ -231,25 +268,6 @@
       <!-- end Print Social Links -->
       {% endif %}
 
-      {% if site.resume_section_softwares %}
-      <!-- begin softwares -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Softwares</h2>
-        </header>
-
-        {% for software in site.data.softwares %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{{ software.role }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{% if software.url %}<a href="{{ software.url }}" itemprop="url">{{ software.software }}</a>{% else %}{{ software.software }}{% endif %}  &bull; {{ software.duration }}</h4>
-          <p class="resume-item-copy">{{ software.description }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end softwares -->
-      {% endif %}
 
       <footer class="page-footer">
         <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
