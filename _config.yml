@@ -23,7 +23,14 @@ resume_contact_address:         ""
 resume_header_contact_info:     "(+33) 665375668 • a.lanrezac@gmail.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: >
+  <p>I am a bioinformatician specialized in structural bioinformatics and large-scale simulations,
+  working at the intersection of physics, chemistry, and computer science.
+  I have particularly focused on developing and implementing a comprehensive software suite
+  for interactive molecular simulations (IMS), enabling real-time human interaction with ongoing
+  simulations, especially for studying the insertion profile of membrane proteins.
+  Currently, I am further specializing as a scientific developer, enhancing my skills
+  in software engineering.</p>
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -43,6 +50,9 @@ resume_section_associations:    false
 resume_section_softwares:       true
 resume_section_interests:       true
 resume_section_publications:    true
+
+intro_section_software: >
+  <p>I pursued the development of BioSpring, UnityMol and MDDriver during my thesis, and they are currently my side project.</p>
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL

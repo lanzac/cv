@@ -5,6 +5,7 @@
 
 .section-header {
   @include section_border;
+  color: #D55E00;
   margin-bottom: 1.5rem;
 
   h2 {
@@ -70,7 +71,12 @@
   }
 
   .executive-summary {
-    @include media_larger_than_mobile { font-size: 1.125rem; }
+    @include media_larger_than_mobile {
+      @include sans;
+      font-size: 1.125rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
 }
 
@@ -101,6 +107,12 @@
       fill: #333;
       @include transition(all .2s ease);
     }
+
+    &:hover .icon rect {
+      fill: #333;
+      @include transition(all .2s ease);
+    }
+
   }
 
   .icon {
@@ -135,12 +147,22 @@
 .content-section {
   margin: 0 0 3rem;
 
-  .resume-item { margin-bottom: 2rem; }
+  .resume-item { margin-bottom: 1rem; }
 
   .resume-item-title {
     @include sans_bold;
-    margin: 0 0 .75rem;
+    margin: 0 0 .5rem;
     font-size: 1.2rem;
+    letter-spacing: -.05rem;
+    line-height: 1;
+  }
+
+  .resume-item-software {
+    @include sans_light;
+    font-family: $mono-font;
+    background-color: #eef;
+    margin: 0 0 .5rem;
+    font-size: 1rem;
     letter-spacing: -.05rem;
     line-height: 1;
   }
@@ -148,8 +170,8 @@
   .resume-item-details {
     @include sans_light;
     font-style: italic;
-    font-size: 1.125rem;
-    margin: 0 0 .75rem;
+    font-size: 1rem;
+    margin: 0 0 .5rem;
     line-height: 1;
 
     &.award-title {
@@ -179,7 +201,9 @@
     }
   }
 
-  .resume-item-copy { margin: .75rem 0 0; }
+  .resume-item-copy { margin: .0rem 0 0; }
+  .resume-item-list { margin: .0rem 0 0; }
+
 }
 
 // footer styles
@@ -230,7 +254,7 @@
 
     .resume-item-details {
       font-size: 12px;
-      margin: 0 0 .75rem;
+      margin: 0 0 .5rem;
       line-height: .7em;
       font-style:italic;
 

@@ -80,16 +80,15 @@
         <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
           <h3 class="resume-item-title" itemprop="name">{{ education.degree }}</h3>
           <h4 class="resume-item-details group" itemprop="description">{{ education.uni }} &bull; {{ education.year }}</h4>
-          <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
-          <p class="resume-item-copy" itemprop="description">
+          <!-- <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5> -->
+          <!-- <p class="resume-item-copy" itemprop="description">
             <ul class="resume-item-list">
               {% for award in education.awards %}
               <li>{{ award.award }}</li>
               {% endfor %}
             </ul>
-
-
-          <p class="resume-item-copy">{{ education.summary }}</p>
+          <p class="resume-item-copy">{{ education.summary }}</p> -->
+          <p class="resume-item-copy"  itemprop="description">{{ education.summary }}</p>
         </div>
         {% endfor %}
       </section>
@@ -143,8 +142,8 @@
         </header>
         {% for skill in site.data.skills %}
         <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
+          <span class="resume-item-details">{{ skill.skill }}</span>
+          <span class="resume-item-copy">{{ skill.description }}<br/></span>
         </div>
         {% endfor %}
 
@@ -199,13 +198,21 @@
           <h2>Softwares</h2>
         </header>
 
+        <div class="executive-summary" itemprop="description">
+          {{ site.intro_section_software }}
+        </div>
+
         {% for software in site.data.softwares %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{{ software.role }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{% if software.url %}<a href="{{ software.url }}" itemprop="url">{{ software.software }}</a>{% else %}{{ software.software }}{% endif %}  &bull; {{ software.duration }}</h4>
-          <p class="resume-item-copy">{{ software.description }}</p>
+
+          <div class="resume-item">
+            <span class="resume-item-software">{{ software.software }}</span>
+            <span class="resume-item-copy">: {{ software.description }}</span>
+            <h4 class="resume-item-details" itemprop="description">{{ software.role }}  &bull; {{ software.duration }}</h4>
         </div>
+          </div>
+
         {% endfor %}
 
       </section>
@@ -220,13 +227,20 @@
           <h2>Outside Interests</h2>
         </header>
 
-        <div class="resume-item">
+        <!-- <div class="resume-item">
           <ul class="resume-item-list">
             {% for interest in site.data.interests %}
             <li>{{ interest.description }}</li>
             {% endfor %}
           </ul>
+        </div> -->
+
+        {% for interest in site.data.interests %}
+        <div class="resume-item">
+          <span class="resume-item-details">{{ interest.interest }}</span>
+          <span class="resume-item-copy">{{ interest.description }}<br/></span>
         </div>
+        {% endfor %}
 
       </section>
       <!-- end Interests -->

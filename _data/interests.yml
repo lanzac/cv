@@ -1,5 +1,8 @@
 # Interests
 
-- description: Climbing (boudering), badminton, cycling
-- description: Music (funk, new-disco, electronic, trip hop, classic), science (physics, astronomy), computer science (qualified in Google CodeJam 2022), coffee enthusiast, chess.
+- interest: Sport
+  description: Climbing (boudering), badminton, cycling
+
+- interest: Miscellaneous
+  description: Music (funk, new-disco, electronic, trip hop, classic), science (physics, astronomy), computer science (qualified in Google CodeJam 2022), coffee enthusiast, chess.
 

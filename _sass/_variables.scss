@@ -7,15 +7,16 @@ $grid-gutter:     10px !default;
 // Colors
 $white:             #fff;
 $black:             #333;
+$grey:              #555;
 
 // Styles
 $text_color:        $black;
 
 // Font stack
-$body-font: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$body-font: 'Product Sans', 'Arial Narrow', Tahoma, Arial, Helvetica, sans-serif !default;
 
 // The base body size
 $body-font-size: 13px !default;
 
 // Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$mono-font: monospace, Consolas, "Liberation Mono", Menlo, Courier !default;
