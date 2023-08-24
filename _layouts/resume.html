@@ -13,7 +13,7 @@
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
         {% if site.resume_avatar == 'true' %}
-        <img src="images/ma_photo.png" alt="my photo" class="avatar no-print" itemprop="image">
+        <img src="images/ma_photo_2.jpeg" alt="my photo" class="avatar no-print" itemprop="image">
         {% endif %}
 
         <!-- Your name is defined in the _config.yml file -->
@@ -58,8 +58,8 @@
 
         {% for job in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.position }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</h4>
+          <span class="resume-item-title" itemprop="name">{{ job.position }}</span>
+          <span class="resume-item-details" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</span>
           <p class="resume-item-copy">{{ job.summary }}</p>
         </div><!-- end of resume-item -->
         {% endfor %}
