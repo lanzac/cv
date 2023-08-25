@@ -5,14 +5,17 @@
   position: Ph.D student with Dr. Marc Baaden
   duration: Nov, 2019 &mdash; Apr, 2023
   summary: >
-    <ul class="resume-item-list"> 
-      <li>Exhaustive state-of-the-art analysis - Advanced review centered around interactive molecular simulations (IMS) [1]</li>
+    <ul class="resume-item-list">
+      <li>Lead writing the first known advanced review of interactive molecular simulations (IMS) [1]</li>
       <li>Development of a software suite integrating visualisation and molecular simulation with human interaction</li>
         <ul class="resume-item-list">
         <li>Application of the protocol for implicit membrane protein insertion. [2,3]</li>
+        <li>Development of a rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion and protein complex assembly (performance constraints for actual local simulations on a PC).</li>
+        <li>MDDriver communication socket extension for bidirectional data exchange between visuation and simulation modules.</li>
+
         </ul>
     </ul>
-    
+
 
 # Master internship with Dr. Dirk Stratmann
 - company: IMPMC, Sorbonne Université, Paris
