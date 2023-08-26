@@ -1,8 +1,17 @@
 # Jobs
 
+# Reseach engineer
+- company: Laboratory of Theoretical Biochemistry, CNRS, France
+  position: Reseach engineer
+  duration: Sep, 2023 &mdash; Jun, 2024
+  summary: >
+    ...
+  
+
+
 # Ph.D student with Dr. Marc Baaden
 - company: Laboratory of Theoretical Biochemistry, CNRS, France
-  position: Ph.D student with Dr. Marc Baaden
+  position: Ph.D student with <a href="http://www.baaden.ibpc.fr/" itemprop="url">Dr. Marc Baaden</a>
   duration: Nov, 2019 &mdash; Apr, 2023
   summary: >
     <ul class="resume-item-list">
@@ -10,16 +19,17 @@
       <li>Development of a software suite integrating visualisation and molecular simulation with human interaction</li>
         <ul class="resume-item-list">
         <li>Application of the protocol for implicit membrane protein insertion. [2,3]</li>
-        <li>Development of a rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion and protein complex assembly (performance constraints for actual local simulations on a PC).</li>
-        <li>MDDriver communication socket extension for bidirectional data exchange between visuation and simulation modules.</li>
-
+        <li>Development of a rigid body dynamics simulation algorithm with quaternion rotation in C++ for membrane insertion and protein complex assembly to manage performance constraints for actual local simulations on a PC.</li>
+        <li>Data communication extension for bidirectional data exchange between visuation and simulation modules (wrapper and data management in C# and C++, socket transfer portocole in C).</li>
+        <li>A novel interactive simulation of protein insertion into double analytical membranes of variable fusion.</li>
+        <li>Algorithm in C# for generating a curved membrane mesh in Unity</li>
+        <li>Protocol for automatically generating Unity UIs from XML parameter files</li>
         </ul>
     </ul>
 
-
 # Master internship with Dr. Dirk Stratmann
 - company: IMPMC, Sorbonne Université, Paris
-  position: Master internship with Dr. Dirk Stratmann
+  position: Master internship with <a href="http://www-ext.impmc.upmc.fr/~stratmann/" itemprop="url">Dr. Dirk Stratmann</a>
   duration: 2019
   summary: >
     <ul class="resume-item-list">
@@ -29,6 +39,6 @@
 
 # Master internship with Dr. Mathilde Carpentier
 - company: Atelier de Bioinformatique (ABI) ISYEB MNHN, Paris
-  position: Master internship with Dr. Mathilde Carpentier
+  position: Master internship with <a href="https://bioinfo.mnhn.fr/abi/people/mathilde/" itemprop="url">Dr. Mathilde Carpentier</a>
   duration: 2018
   summary: Contribution to the development of a new method to search for protein structural similarities in a bank.
