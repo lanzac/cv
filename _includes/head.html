@@ -24,5 +24,22 @@
 
   <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
 
+  <script type="text/javascript">
+    var apiUrl = 'https://api.github.com/repos/lanzac/resume/commits?per_page=1';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+      // console.log(data);
+      const commitDate = new Date(data[0].commit.committer.date);
+      const formattedDate = commitDate.toLocaleDateString(); // Format based on user's locale, without time
+      // You can also use other formatting options, like toLocaleDateString(), toLocaleTimeString()
+      document.getElementById('commitDate').innerHTML = formattedDate;
+
+    }).catch(err => {
+      // Do something for an error here
+    });
+</script>
+
 
 </head>
