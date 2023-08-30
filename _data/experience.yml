@@ -5,8 +5,12 @@
   position: Reseach engineer
   duration: Sep, 2023 &mdash; Jun, 2024
   summary: >
-    ...
-  
+    <ul class="resume-item-list">
+      <li>Resuming work on the MDverse web application prototype: extrapolation of the data explorer to integrate laboratory data.</li>
+      <li>Implement a local prototype with a corresponding datalake/dataverse.</li>
+    </ul>
+
+
 
 
 # Ph.D student with Dr. Marc Baaden
@@ -16,19 +20,18 @@
   summary: >
     <ul class="resume-item-list">
       <li>Lead writing the first known advanced review of interactive molecular simulations (IMS) [1]</li>
-      <li>Development of a software suite integrating visualisation and molecular simulation with human interaction</li>
+      <li>Development of a software suite integrating visualisation and molecular simulation with human interaction:</li>
         <ul class="resume-item-list">
-        <li>Application of the protocol for implicit membrane protein insertion. [2,3]</li>
-        <li>Development of a rigid body dynamics simulation algorithm with quaternion rotation in C++ for membrane insertion and protein complex assembly to manage performance constraints for actual local simulations on a PC.</li>
+        <li>Development in C# of UnityMol visualization software: generation of Unity UIs from XML parameter files, curved membrane mesh
+        <li>Development in C++ of BioSpring molecular simulation engine: rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion and protein complex assembly to manage performance constraints for actual local simulations on a PC.</li>
+        <li>Development in Python3 of analysis scripts of molecular simulations data</li>
         <li>Data communication extension for bidirectional data exchange between visuation and simulation modules (wrapper and data management in C# and C++, socket transfer portocole in C).</li>
-        <li>A novel interactive simulation of protein insertion into double analytical membranes of variable fusion.</li>
-        <li>Algorithm in C# for generating a curved membrane mesh in Unity</li>
-        <li>Protocol for automatically generating Unity UIs from XML parameter files</li>
+        <li>Application to the interactive insertion of proteins into implicit membranes [2,3]: A novel interactive simulation of protein insertion into double analytical membranes of variable fusion.</li>
         </ul>
     </ul>
 
 # Master internship with Dr. Dirk Stratmann
-- company: IMPMC, Sorbonne Université, Paris
+- company: Institute of Mineralogy, Physics of Materials and Cosmochemistry, Sorbonne Université - CNRS, France
   position: Master internship with <a href="http://www-ext.impmc.upmc.fr/~stratmann/" itemprop="url">Dr. Dirk Stratmann</a>
   duration: 2019
   summary: >
@@ -38,7 +41,10 @@
     </ul>
 
 # Master internship with Dr. Mathilde Carpentier
-- company: Atelier de Bioinformatique (ABI) ISYEB MNHN, Paris
+- company: Institute of Systematics, Evolution and Biodiversity, Sorbonne Université - CNRS, France
   position: Master internship with <a href="https://bioinfo.mnhn.fr/abi/people/mathilde/" itemprop="url">Dr. Mathilde Carpentier</a>
   duration: 2018
-  summary: Contribution to the development of a new method to search for protein structural similarities in a bank.
+  summary: >
+    <ul class="resume-item-list">
+    <li>Contribution to the development of a new method to search for protein structural similarities in a bank.</li>
+    </ul>
