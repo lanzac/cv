@@ -5,11 +5,11 @@
 
 # Scientific software
 - skill: Scientific software
-  description: VMD, PyMol, APBS, GROMACS, NAMD, HADDOCK, Desmos
+  description: VMD, PyMol, APBS, GROMACS, NAMD, HADDOCK, Desmos, AutoDock, Chimera, HADDOCK
 
 # Communication
 - skill: Communication
-  description: \(\LaTeX\), Apple/Microsoft office suites, Website design (HTML/CSS), Authorea
+  description: Apple/Microsoft office suites, Website design (HTML/CSS), Authorea, \(\LaTeX\)
 
 # Programming
 - skill: Programming

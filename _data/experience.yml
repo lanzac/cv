@@ -6,7 +6,7 @@
   duration: Sep, 2023 &mdash; Jun, 2024
   summary: >
     <ul class="resume-item-list">
-      <li>Continuation of the development work on the MDverse web application prototype: extrapolation of the data explorer to integrate laboratory data.</li>
+      <li>Continuation of the development work on the <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a> web application prototype: extrapolation of the data explorer to integrate laboratory data.</li>
       <li>Implement a local prototype with a corresponding datalake/dataverse.</li>
     </ul>
 
@@ -19,19 +19,20 @@
   duration: Nov, 2019 &mdash; Apr, 2023
   summary: >
     <ul class="resume-item-list">
-      <li>Lead writing the first known advanced review of interactive molecular simulations (IMS) [1]</li>
-      <li>Development of a software suite integrating visualisation and molecular simulation with human interaction:</li>
+      <li>Lead writing the first known advanced review of interactive molecular simulations (IMS) <a href="#" data-scroll-to="publications">[1]</a></li>
+      <li>Development of a software suite integrating visualisation and molecular simulation with human interaction <a href="#" data-scroll-to="publications">[2,3]</a>:</li>
         <ul class="resume-item-list">
-        <li>Development in C# of UnityMol visualization software:
-          automatic generation of Unity UIs from XML parameter files,
-          <span><span>algorithms for curved membrane mesh generation</span>
-          <img src="https://lh4.googleusercontent.com/i1RprwcvxhbN2TAMunNxS4RiNVT0DvlD9FNQCvPFuJ0=w140-h165-no"/>
-          </span>,
-          graphical and controls features dedicated for preparing and interaction with simulations.</li>
-        <li>Development in C++ of BioSpring molecular simulation engine: rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion and protein complex assembly to manage performance constraints for local simulations on a PC. Integration of a dynamic SASA calculation method with easy management of its parameters. Automating sampling algorithm of protein positions within membrane.</li>
+        <li>
+          Development in \(\verb!C#!\) of UnityMol visualization software:
+          automatic generation of Unity UIs from personal XML parameter files,
+          algorithms for curved membrane mesh generation,
+          graphical and controls features dedicated for preparing and interact with simulations,
+          prototype that feature steering by predefined contraints (inpired by Ambiguous Interaction Restraints (AIRs) method from the <a href="https://pubmed.ncbi.nlm.nih.gov/12580598/" itemprop="url">HADDOCK</a> docking program) for docking interactive experiments <a href="#" data-scroll-to="posters">(1)</a>.
+        </li>
+        <li>Development in \(\verb!C++!\) of BioSpring molecular simulation engine: rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion and protein complex assembly to manage performance constraints for local simulations on a PC. Integration of a dynamic SASA calculation method with easy management of its parameters. Automating sampling algorithm of protein positions within membrane.</li>
         <li>Development in Python3 of analysis scripts of molecular simulations data</li>
-        <li>Data communication extension for bidirectional data exchange between visuation and simulation modules (wrapper and data management in C# and C++, socket transfer portocole in C).</li>
-        <li>Application to the interactive insertion of proteins into implicit membranes [2,3]: A novel interactive simulation of protein insertion into double analytical membranes of variable fusion.</li>
+        <li>Data communication extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\)).</li>
+        <li>Application to the interactive insertion of proteins into implicit membranes: A novel interactive simulation of protein insertion into double analytical membranes of variable fusion.</li>
         </ul>
     </ul>
 

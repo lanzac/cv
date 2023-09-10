@@ -78,12 +78,20 @@
       <!-- begin publications -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Peer-reviewed publications</h2>
+          <h2>Peer-reviewed publications & scientific production</h2>
         </header>
 
+        <h4 id="publications">Publications:</h4>
         {% for publication in site.data.publications %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <h4 class="resume-item-publications" itemprop="description"> {{ publication.num }}. {{ publication.authors }} "<i>{{ publication.title }}</i>" {{ publication.journal }} ({{ publication.date }}) DOI: <a href="{{ publication.doi }}" itemprop="url">{{ publication.doi | replace: 'https://doi.org/', '' }}</a></h4>
+          <h4 class="resume-item-publications" itemprop="description"> {{ publication.num }} {{ publication.authors }} "<i>{{ publication.title }}</i>" {{ publication.journal }} ({{ publication.date }}) DOI: <a href="{{ publication.doi }}" itemprop="url">{{ publication.doi | replace: 'https://doi.org/', '' }}</a></h4>
+        </div>
+        {% endfor %}
+
+        <h4 id="posters">Poster:</h4>
+        {% for poster in site.data.posters %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <h4 class="resume-item-publications" itemprop="description"> {{ poster.num }} {{ poster.authors }} "<i>{{ poster.title }}</i>" {{ poster.conference }} ({{ poster.date }}) : <a href="{{ poster.poster }}" itemprop="url">Poster</a>, <a href="{{ poster.abstract }}">Abstract</a></h4>
         </div>
         {% endfor %}
 
@@ -199,7 +207,7 @@
       <!-- begin softwares -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Softwares</h2>
+          <h2>Softwares & Tools</h2>
         </header>
 
         <div class="executive-summary" itemprop="description">
@@ -213,7 +221,7 @@
           <div class="resume-item">
             <span class="resume-item-software">{{ software.software }}</span>
             <span class="resume-item-copy">: {{ software.description }}</span>
-            <h4 class="resume-item-details" itemprop="description">{{ software.role }}  &bull; {{ software.duration }}</h4>
+            <h4 class="resume-item-details" itemprop="description">{{ software.role }}  &bull; {{ software.duration }} &bull; {{ software.language }}</h4>
         </div>
           </div>
 

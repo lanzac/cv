@@ -1,0 +1,11 @@
+# Posters
+
+- poster: PosterEMBO
+  num: "(1)"
+  authors: Lanrezac A, Férey N, Baaden M.
+  title: Combining human interaction and empirical data using interactive elastic network models
+  conference: "EMBO Workshop: Advances and Challenges in Biomolecular Simulations"
+  date: 2021
+  poster: images/EMBO_Poster.pdf
+  abstract: images/EMBO_Poster_Abstract.pdf
+
