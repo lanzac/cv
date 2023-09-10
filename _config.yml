@@ -53,7 +53,10 @@ resume_section_interests:       true
 resume_section_publications:    true
 
 intro_section_software: >
-  <p>I pursued the development of BioSpring, UnityMol and MDDriver during my thesis, and they are currently my side project.</p>
+  <p>
+    I pursued the development of BioSpring, UnityMol and MDDriver during my thesis, and they are currently my side project.
+    These are projects developed by Marc Baaden's team at the Theoretical Biochemistry Laboratory.
+  </p>
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
