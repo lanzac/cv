@@ -243,11 +243,11 @@
   }
 }
 
-// Show img when text hovering
+// Show video when text hovering
 // <p>This is some text. <span>HOVER OVER ME</span>
-// <img src="http://www.placecage.com/100/100"/>
+// <video src="http://www.placecage.com/100/100"/>
 // </p>
-img{
+video{
   opacity: 0;
   visibility: hidden; /* L'image est invisible et cachée */
   position: absolute; /* Garde la position même quand invisible */
@@ -255,11 +255,16 @@ img{
   @include transition(all 1s ease);
 }
 
-span:hover + img{
+span:hover + video{
   opacity: 1;
   visibility: visible; /* L'image devient visible au survol */
   left: 10rem;
 }
+
+
+// Smooth scrolling for links pointing to location inside the page
+// https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link/51588820#51588820
+html{scroll-behavior:smooth}
 
 .print-only { display: none !important }
 

@@ -23,6 +23,25 @@
   </script>
 
   <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+
+  <script>
+    // Fonction pour gérer le clic sur les liens avec l'attribut data-scroll-to
+    document.addEventListener("click", function (event) {
+        const target = event.target;
+
+        // Vérifie si l'élément cliqué est un lien avec l'attribut data-scroll-to
+        if (target.tagName === "A" && target.hasAttribute("data-scroll-to")) {
+            const targetId = target.getAttribute("data-scroll-to");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                event.preventDefault();
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+</script>
 
   <script type="text/javascript">
     var apiUrl = 'https://api.github.com/repos/lanzac/resume/commits?per_page=1';
