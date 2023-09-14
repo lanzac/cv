@@ -250,18 +250,30 @@
 // <p>This is some text. <span>HOVER OVER ME</span>
 // <video src="http://www.placecage.com/100/100"/>
 // </p>
-video{
+.video{
   opacity: 0;
   visibility: hidden; /* L'image est invisible et cachée */
   position: absolute; /* Garde la position même quand invisible */
-  left: 10rem; /* La position initiale */
+  left: 5rem; /* La position initiale */
   @include transition(all 1s ease);
+  border-radius: 20px;
 }
 
-span:hover + video{
+li:hover + .video{
   opacity: 1;
   visibility: visible; /* L'image devient visible au survol */
-  left: 10rem;
+  left: 5rem;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+li:hover{
+  background-color:rgba($color: #333, $alpha: 0.1);
+}
+
+.under {
+  text-decoration: dashed underline;
 }
 
 
@@ -315,6 +327,10 @@ html{scroll-behavior:smooth}
       a {
         border-bottom: none;
       }
+    }
+
+    .under {
+      text-decoration: none;
     }
   }
 
