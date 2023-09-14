@@ -81,17 +81,17 @@
           <h2>Peer-reviewed publications & scientific production</h2>
         </header>
 
-        <h4 id="publications">Publications:</h4>
+        <h4 class="resume-item-title" id="publications">Publications:</h4>
         {% for publication in site.data.publications %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <h4 class="resume-item-publications" itemprop="description"> {{ publication.num }} {{ publication.authors }} "<i>{{ publication.title }}</i>" {{ publication.journal }} ({{ publication.date }}) DOI: <a href="{{ publication.doi }}" itemprop="url">{{ publication.doi | replace: 'https://doi.org/', '' }}</a></h4>
         </div>
         {% endfor %}
 
-        <h4 id="posters">Poster:</h4>
+        <h4 class="resume-item-title" id="posters">Poster:</h4>
         {% for poster in site.data.posters %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <h4 class="resume-item-publications" itemprop="description"> {{ poster.num }} {{ poster.authors }} "<i>{{ poster.title }}</i>" {{ poster.conference }} ({{ poster.date }}) : <a href="{{ poster.poster }}" itemprop="url">Poster</a>, <a href="{{ poster.abstract }}">Abstract</a></h4>
+          <h4 class="resume-item-publications" itemprop="description"> {{ poster.num }} {{ poster.authors }} "<i>{{ poster.title }}</i>" {{ poster.conference }} ({{ poster.date }})<span class="no-print"> : <a href="{{ poster.poster }}" itemprop="url">Poster</a>, <a href="{{ poster.abstract }}">Abstract</a></span></h4>
         </div>
         {% endfor %}
 
