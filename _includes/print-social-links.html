@@ -37,5 +37,20 @@
   <li><strong>Website</strong>: {{ site.resume_social_links.resume_website_url }}</li>
   {% endif %}
 
+  <!-- ResearchGate link -->
+  {% if site.resume_social_links.resume_researchgate_url %}
+  <li><strong>ResearchGate</strong>: {{ site.resume_social_links.resume_researchgate_url }}</li>
+  {% endif %}
+
+  <!-- Mail link -->
+  {% if site.resume_social_links.resume_mail_url %}
+  <li><strong>Mail</strong>: {{ site.resume_social_links.resume_mail_url }}</li>
+  {% endif %}
+
+  <!-- Telephone link -->
+  {% if site.resume_social_links.resume_tel %}
+  <li><strong>Tel</strong>: {{ site.resume_social_links.resume_tel }}</li>
+  {% endif %}
+
 </ul>
 {% endif %}
