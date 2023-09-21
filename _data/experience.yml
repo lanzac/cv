@@ -53,11 +53,20 @@
 
         <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
 
-        <li>Data communication extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+        <li>Prepration simulation tool for BioSpring (system preparation, parameter management, representation)</li>
+        <li>Reactive plot for interactive trajectories analysis using a linking and brushing approach.</li>
+        <li>Using socket API for client server communication between analysis script and UnityMol to generate dynamic plot</li>
+
+        <h4>Data communication:</h4>
+
+        <li>Extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
         
-        <li>Application to the interactive insertion of proteins into implicit membranes: A novel interactive simulation of protein insertion into double analytical membranes of variable fusion</li>
+
         
+
         </ul>
+
+        <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
     </ul>
 
 # Master internship with Dr. Dirk Stratmann
