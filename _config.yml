@@ -41,7 +41,7 @@ resume_header_intro: >
 
 # Decide which sections to use
 # comment out to hide
-resume_section_experience:      false
+resume_section_experience:      true
 resume_section_education:       true
 resume_section_projects:        false
 resume_section_skills:          true
@@ -70,8 +70,9 @@ resume_social_links:
   # resume_website_url:           "http://joelglovier.com"
   # resume_medium_url:            "https://medium.com/@jglovier"
   resume_researchgate_url:      "https://www.researchgate.net/profile/Andre-Lanrezac"
+  resume_orcid_url:             "https://orcid.org/0000-0003-2069-4161"
   resume_mail_url:              "a.lanrezac@gmail.com"
-  resume_tel:                   "(+33) 665375668"
+  # resume_tel:                   ""
 resume_print_social_links:      true
 
 # Design settings

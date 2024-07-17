@@ -41,7 +41,7 @@
           {% include icon-links.html %}
         </div>
 
-        <div class="executive-summary" itemprop="description">
+        <div class="executive-summary no-print" itemprop="description">
           {{ site.resume_header_intro }}
         </div>
 
@@ -54,11 +54,18 @@
 
       </header>
 
+      <!-- Some cool emoji sites:
+      https://symbl.cc
+      https://www.compart.com/en/unicode/ -->
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -EDUCATION------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_education %}
       <!-- begin Education -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Education</h2>
+          <h2>Education <span class="emoji" style="transform: translateY(4px);">{% include icons/icon-graduate.html %}</span></h2>
         </header>
 
         {% for education in site.data.education %}
@@ -80,16 +87,66 @@
       <!-- end Education -->
       {% endif %}
 
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -EXPERIENCE------------------------------------------------------ -->
+      <!-- ----------------------------------------------------------------- -->
+      {% if site.resume_section_experience %}
+      <!-- begin Experience -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Experience 🖳</h2>
+        </header>
+
+        {% for job in site.data.experience %}
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h4 class="resume-item-title" itemprop="name">{{ job.position }}</h4>
+          <p class="resume-item-details" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</p>
+          <p class="resume-item-copy">{{ job.summary }}</p>
+        </div><!-- end of resume-item -->
+        {% endfor %}
+
+      </section>
+      <!-- end Experience -->
+      {% endif %}
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -SKILLS---------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills <span class="skills-header">
+            <span class="wheel-large">⛭</span>
+            <span class="wheel-middle">⛭</span>
+          </span></h2>
+        </header>
+        {% for skill in site.data.skills %}
+        <div class="resume-item">
+          <span class="resume-item-title">{{ skill.skill }}</span>
+          <span class="resume-item-copy">: {{ skill.description }}<br/></span>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end Skills -->
+      {% endif %}
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -PUBLICATIONS---------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_publications %}
       <!-- begin publications -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Publications & scientific production</h2>
+          <h2>Publications & scientific production 🗐</h2>
         </header>
 
         <h4 class="resume-item-title" id="publications">Publications:</h4>
         {% for publication in site.data.publications %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" id="{{ publication.num }}">
           <h4 class="resume-item-publications" itemprop="description"> {{ publication.num }} {{ publication.authors }} "<i>{{ publication.title }}</i>" {{ publication.journal }} ({{ publication.date }}) DOI: <a href="{{ publication.doi }}" itemprop="url">{{ publication.doi | replace: 'https://doi.org/', '' }}</a></h4>
         </div>
         {% endfor %}
@@ -105,27 +162,9 @@
       <!-- end publications -->
       {% endif %}
 
-      {% if site.resume_section_experience %}
-      <!-- begin Experience -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Research experience</h2>
-        </header>
-
-        {% for job in site.data.experience %}
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h4 class="resume-item-title" itemprop="name">{{ job.position }}</h4>
-          <p class="resume-item-details" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</p>
-          <p class="resume-item-copy">{{ job.summary }}</p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
-
-      </section>
-      <!-- end Experience -->
-      {% endif %}
-
-
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -PROJECTS-------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section">
@@ -146,24 +185,10 @@
       <!-- end Projects -->
       {% endif %}
 
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
 
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <span class="resume-item-title">{{ skill.skill }}</span>
-          <span class="resume-item-copy">: {{ skill.description }}<br/></span>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Skills -->
-      {% endif %}
-
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -RECOGNITION----------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_recognition %}
       <!-- begin Recognition -->
       <section class="content-section">
@@ -184,6 +209,9 @@
       <!-- end Recognition -->
       {% endif %}
 
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -ASSOCIATIONS---------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_associations %}
       <!-- begin Associations -->
       <section class="content-section">
@@ -204,11 +232,14 @@
       <!-- end Associations -->
       {% endif %}
 
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -SOFTWARES------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_softwares %}
       <!-- begin softwares -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Softwares & Tools</h2>
+          <h2>Softwares & Tools 🖫</h2>
         </header>
 
         <div class="executive-summary" itemprop="description">
@@ -220,7 +251,7 @@
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
 
           <div class="resume-item">
-            <span class="resume-item-software">{{ software.software }}</span>
+            <span class="resume-item-software">• {{ software.software }}</span>
             <span class="resume-item-copy">: {{ software.description }}</span>
             <h4 class="resume-item-details" itemprop="description">{{ software.role }}  &bull; {{ software.duration }} &bull; {{ software.language }}</h4>
         </div>
@@ -232,12 +263,15 @@
       <!-- end softwares -->
       {% endif %}
 
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -INTERESTS------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
       {% if site.resume_section_interests %}
       <!-- begin Interests -->
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Outside Interests</h2>
+          <h2>Outside Interests ♘</h2>
         </header>
 
         <!-- <div class="resume-item">

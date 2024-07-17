@@ -1,10 +1,18 @@
 <!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
+
+<!-- Check on https://www.svgrepo.com to edit svg  -->
+
 {% if site.resume_social_links %}
 <ul class="icon-links">
 
   <!-- GitHub link -->
   {% if site.resume_social_links.resume_github_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_github_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-github.html %}</a></li>
+  <li class="icon-link-item">
+    <a href="{{ site.resume_social_links.resume_github_url }}" class="icon-link" itemprop="sameAs">
+      {% include icons/icon-github.html %}
+      <span class="tooltip">GitHub</span>
+    </a>
+  </li>
   {% endif %}
 
   <!-- Twitter link -->
@@ -31,7 +39,12 @@
 
   <!-- LinkedIn link -->
   {% if site.resume_social_links.resume_linkedin_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-linkedin.html %}</a></li>
+  <li class="icon-link-item">
+    <a href="{{ site.resume_social_links.resume_linkedin_url }}" class="icon-link" itemprop="sameAs">
+      {% include icons/icon-linkedin.html %}
+      <span class="tooltip">LinkedIn</span>
+    </a>
+  </li>
   {% endif %}
 
   <!-- Instagram link -->
@@ -46,17 +59,42 @@
 
   <!-- ResearchGate link -->
   {% if site.resume_social_links.resume_researchgate_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_researchgate_url }}" class="icon-link" itemprop="url">{% include icons/icon-researchgate.html %}</a></li>
+  <li class="icon-link-item">
+    <a href="{{ site.resume_social_links.resume_researchgate_url }}" class="icon-link" itemprop="url">
+      {% include icons/icon-researchgate.html %}
+      <span class="tooltip">ResearchGate</span>
+    </a>
+  </li>
+  {% endif %}
+
+  <!-- ORCID link -->
+  {% if site.resume_social_links.resume_orcid_url %}
+  <li class="icon-link-item">
+    <a href="{{ site.resume_social_links.resume_orcid_url }}" class="icon-link" itemprop="url">
+      {% include icons/icon-orcid.html %}
+      <span class="tooltip">ORCID</span>
+    </a>
+  </li>
   {% endif %}
 
   <!-- Mail link -->
   {% if site.resume_social_links.resume_mail_url %}
-  <li class="icon-link-item"><a href="mailto:{{ site.resume_social_links.resume_mail_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-mail.html %}</a></li>
+  <li class="icon-link-item">
+    <a href="mailto:{{ site.resume_social_links.resume_mail_url }}" class="icon-link" itemprop="sameAs">
+      {% include icons/icon-mail.html %}
+      <span class="tooltip">Mail</span>
+    </a>
+  </li>
   {% endif %}
 
   <!-- Telephone link -->
   {% if site.resume_social_links.resume_tel %}
-  <li class="icon-link-item"><a href="tel:{{ site.resume_social_links.resume_tel }}" class="icon-link" itemprop="sameAs">{% include icons/icon-tel.html %}</a></li>
+  <li class="icon-link-item">
+    <a href="tel:{{ site.resume_social_links.resume_tel }}" class="icon-link" itemprop="sameAs">
+      {% include icons/icon-tel.html %}
+      <span class="tooltip">Tel</span>
+    </a>
+  </li>
   {% endif %}
 
 </ul>

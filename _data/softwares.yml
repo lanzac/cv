@@ -3,7 +3,7 @@
 # BioSpring
 - software: BioSpring
   role: Developer
-  duration: 2019 &mdash; Present
+  duration: 2019 &mdash; 2024
   # url: "#"
   description: Interactive simulation engine based on an extended elastic network model
   language: \(\verb!C++11!\)
@@ -11,7 +11,7 @@
 # UnityMol
 - software: UnityMol
   role: Developer
-  duration: 2019 &mdash; Present
+  duration: 2019 &mdash; 2024
   # url: "#"
   description: Molecular viewer
   language: \(\verb!C#!\)
@@ -19,7 +19,7 @@
 # MDDriver
 - software: MDDriver
   role: Developer
-  duration: 2019 &mdash; Present
+  duration: 2019 &mdash; 2024
   # url: "#"
   description: Socket for data communication
   language: \(\verb!C!\)
@@ -36,10 +36,12 @@
 
 # 
 - software: AlimBDD
-  role: Creator & Developper
-  duration: side-project
+  role: Designer & Developper
+  duration: 2024 &mdash; Now
   description: >
-    Food application (BDD: "base de donnée" in french) using MongoDB & Streamlit
-    BDD also stands for behaviour-driven development
-  language: Python3
+    Side project application that performs detailed nutritional analysis by 
+    inventorying food products and analyzing their nutrients. The app provides 
+    users with a scientific overview of their dietary intake and allows for 
+    experimental combinations of foods to optimize nutritional value.
+  language: Python3, MongoDB, Streamlit
     

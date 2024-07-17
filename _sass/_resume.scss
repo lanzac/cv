@@ -5,7 +5,7 @@
 
 .section-header {
   @include section_border;
-  color: #6F4E37;
+  color: $coffeeColor;
   margin-bottom: 1.5rem;
 
   h2 {
@@ -91,6 +91,7 @@
     @include media_larger_than_mobile {
       @include sans;
       font-size: 1.125rem;
+      line-height: 1.5;
       text-align: justify;
       text-justify: inter-word;
     }
@@ -102,10 +103,12 @@
   padding: 0;
   list-style: none;
   position: relative;
-  top: 4px;
-  text-align: center;
-  border-top: 2px solid #c7c7c7;
-  padding-top: .4rem;
+  height: 28px;
+  max-height: 28px;
+  // top: 4px;
+  // text-align: center;
+  // border-top: 2px solid #c7c7c7;
+  // padding-top: .4rem;
 
   @include media_larger_than_mobile {
     float: right;
@@ -115,10 +118,16 @@
 
   .icon-link-item {
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 0px;
+    height: 28px;
+    max-height: 28px;
+    position: relative;
   }
 
-  .icon-link { display: inline-block;
+  .icon-link { 
+    display: inline-block;
+    height: 28px;
+    max-height: 28px;
 
     &:hover .icon path {
       fill: #333;
@@ -130,6 +139,39 @@
       @include transition(all .2s ease);
     }
 
+  }
+
+  .icon-link-item .tooltip {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* Position the tooltip above the text */
+      left: 50%;
+      margin-left: -60px; /* Use half of the tooltip width to center it */
+      opacity: 0;
+      transition: opacity 0.3s;
+  }
+
+  .icon-link-item .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  .icon-link-item:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
   }
 
   .icon {
@@ -177,9 +219,9 @@
   .resume-item-software {
     @include sans_light;
     font-family: $mono-font;
-    background-color: #eef;
+    background-color: rgb(255, 255, 255);
     margin: 0 0 .5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: -.05rem;
     line-height: 1;
   }
@@ -190,10 +232,33 @@
     font-size: 1rem;
     margin: 0 0 .5rem;
     line-height: 1;
+    color: rgb(67, 67, 136);
 
     &.award-title {
       font-size: 1rem;
     }
+  }
+
+  .emoji {
+    display: inline-flex;
+    align-items: center; /* Center vertically */
+    height: 20px; /* Set your desired height */
+    max-height: 20px; /* Set your desired height */
+    width: auto; /* Maintain aspect ratio */
+  }
+  .emoji svg {
+    height: 100%; /* Ensure the SVG scales to the container's height */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .skills-header .wheel-large {
+      font-size: 1.0em;
+  }
+  .skills-header .wheel-middle {
+      font-size: 0.8em;
+      position: relative;
+      top: -0.45em;
+      left: -0.4em;
   }
 
   .resume-item-publications {
@@ -273,9 +338,9 @@ li:hover + .video{
   overflow: hidden;
 }
 
-li:hover{
-  background-color:rgba($color: #333, $alpha: 0.1);
-}
+// li:hover{
+//   background-color:rgba($color: #333, $alpha: 0.1);
+// }
 
 .under {
   text-decoration: dashed underline;
@@ -301,6 +366,7 @@ html{scroll-behavior:smooth}
     .executive-summary {
       @include sans;
       font-size: 1.0rem;
+      line-height: 1.0;
       text-align: justify;
       text-justify: inter-word;
     }
@@ -342,6 +408,12 @@ html{scroll-behavior:smooth}
 
     .under {
       text-decoration: none;
+    }
+
+    .emoji {
+      filter: none;
+      font-family: 'Noto Color Emoji', sans-serif;
+      color: black; /* Adjust to black for better print readability */
     }
   }
 

@@ -17,4 +17,4 @@
 
 # Development tools
 - skill: Development tools
-  description: git, lldb, CMake, Unity, Docker, Pixlr E, Jekyll, MongoDB, Streamlit
+  description: git, gdb, lldb, CMake, Unity, Docker, Pixlr E, Jekyll, MongoDB, Streamlit

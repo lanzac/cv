@@ -6,87 +6,132 @@
   duration: Sep, 2023 &mdash; Jun, 2024
   summary: >
     <ul class="resume-item-list">
-      <li>Research: 
+      <li><b>Research</b>: 
       <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a>
       web app for large-scale molecular simulation data analysis.
       </li>
-      <li>Development: Molecular simulations software suite (\(\verb!C#!\), C++, Python, C)</li>
+      <li><b>Development</b>: 
+      Molecular simulations software suite (Unity, \(\verb!C#!\), C++, Python, C)</li>
     </ul>
 
 
-
-
-# Ph.D student with Dr. Marc Baaden
+# Research Assistant
 - company: Laboratory of Theoretical Biochemistry, CNRS, France
-  position: Ph.D student with <a href="http://www.baaden.ibpc.fr/" itemprop="url">Dr. Marc Baaden</a>
+  position: Research Assistant
   duration: Nov, 2019 &mdash; Apr, 2023
   summary: >
     <ul class="resume-item-list">
-      <li>Lead writing the first known advanced review of interactive molecular simulations (IMS) <a href="#" data-scroll-to="publications">[1]</a></li>
-      <li>Development of a software suite integrating visualisation and molecular simulation with human interaction <a href="#" data-scroll-to="publications">[2,3]</a>:</li>
-        <ul class="resume-item-list">
-
-
-
-        <h4>Development in \(\verb!C#!\) of UnityMol visualization software:</h4>
-
-        <li>Automatic generation of Unity UIs from personal XML parameter files</li>
-
-        <li>Algorithms for curved membrane mesh generation</li>
-        <video class="video" width=400 loop autoplay muted><source src="videos/OmpA_curved_10Aoffset.mp4" type="video/mp4"></video>
-
-        <li>Graphical and controls features dedicated for preparing and interact with simulations</li>
-
-        <li>Prototype that feature steering by predefined contraints (inpired by Ambiguous Interaction Restraints (AIRs) method from the <a href="https://pubmed.ncbi.nlm.nih.gov/12580598/" itemprop="url">HADDOCK</a> docking program) for docking interactive experiments <a href="#" data-scroll-to="posters">(1)</a>.</li>
-        <video class="video" width=400 loop autoplay muted><source src="videos/bs_haddock.mp4" type="video/mp4"></video>
-
-
-
-        <h4>Development in C++ of BioSpring molecular simulation engine:</h4>
-
-        <li> Rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion to take account of the calculation constraint on a local machine</li>
-        
-        <li>Integration of a dynamic SASA calculation method for protein complex assembly</li>
-        <video class="video" width=400 loop autoplay muted><source src="videos/sasa_interface_zoom.mp4" type="video/mp4"></video>
-        
-        <li>Automating sampling algorithm of protein positions within membrane</li>
-        <video class="video" width=400 loop autoplay muted><source src="videos/exhaust_sampl_OmpA.mp4" type="video/mp4"></video>
-
-
-
-        <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
-
-        <li>Prepration simulation tool for BioSpring (system preparation, parameter management, representation)</li>
-        <li>Reactive plot for interactive trajectories analysis using a linking and brushing approach.</li>
-        <li>Using socket API for client server communication between analysis script and UnityMol to generate dynamic plot</li>
-
-        <h4>Data communication:</h4>
-
-        <li>Extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+      <li>Lead author of an advanced review on interactive molecular simulations (IMS) <a href="#" data-scroll-to="[1]">[1]</a></li>
+      <li>
+        Development of a software suite integrating visualisation and molecular 
+        simulation with human interaction <a href="#" data-scroll-to="[3]">[2,3]</a>
+        (Unity, \(\verb!C#!\), C++, Python, C)
+      </li>
         
 
-        
 
-        </ul>
+# <ul class="resume-item-list">
+#   <h4>Development in \(\verb!C#!\) of UnityMol visualization software</h4>
 
-        <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
-    </ul>
+#   <li>Leveraged game engine for developing interactive protein-membrane insertion simulations</li>
+#   <li>Created hybrid XML/UIs and APIs for communication with BioSpring</li>
+
+
+#   <h4>Development in C++ of BioSpring molecular simulation engine:</h4>
+
+#   <li> Adapted classical molecular dynamics to rigid body and coarse-grain simulations in arbitrarily shaped implicit membranes</li>
+  
+#   <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
+
+#   <li>Data analysis scripts with Python graphical tools and Jupyter</li>
+#   <li>Establish Unity-Python-TCP-Server for direct data exchange with Unity for dynamic plotting</li>
+#   <li>Linking and brushing plot for trajectories analysis using a hybrid Python/HTML code.</li>
+
+#   <h4>Data communication:</h4>
+
+#   <li>Established a formalized, thread-safe client-server data exchange protocol with buffering and function callbacks
+#   (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+  
+#   </ul>
+
+#   <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
+# </ul>
+
+  # <ul class="resume-item-list">
+  #   <li>Lead author of an advanced review on interactive molecular simulations (IMS) <a href="#" data-scroll-to="[1]">[1]</a></li>
+  #   <li>Development of a software suite integrating visualisation and molecular simulation with human interaction <a href="#" data-scroll-to="[3]">[2,3]</a>:</li>
+  #     <ul class="resume-item-list">
+
+
+
+  #     <h4>Development in \(\verb!C#!\) of UnityMol visualization software</h4>
+
+  #     <li>Automatic generation of Unity UIs from personal XML parameter files</li>
+
+  #     <li>Algorithms for curved membrane mesh generation</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/OmpA_curved_10Aoffset.mp4" type="video/mp4"></video>
+
+  #     <li>Graphical and controls features dedicated for preparing and interact with simulations</li>
+
+  #     <li>Prototype that feature steering by predefined contraints (inpired by Ambiguous Interaction Restraints (AIRs) method from the <a href="https://pubmed.ncbi.nlm.nih.gov/12580598/" itemprop="url">HADDOCK</a> docking program) for docking interactive experiments <a href="#" data-scroll-to="posters">(1)</a>.</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/bs_haddock.mp4" type="video/mp4"></video>
+
+
+
+  #     <h4>Development in C++ of BioSpring molecular simulation engine:</h4>
+
+  #     <li> Rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion to take account of the calculation constraint on a local machine</li>
+      
+  #     <li>Integration of a dynamic SASA calculation method for protein complex assembly</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/sasa_interface_zoom.mp4" type="video/mp4"></video>
+      
+  #     <li>Automating sampling algorithm of protein positions within membrane</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/exhaust_sampl_OmpA.mp4" type="video/mp4"></video>
+
+
+
+  #     <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
+
+  #     <li>Prepration simulation tool for BioSpring (system preparation, parameter management, representation)</li>
+  #     <li>Reactive plot for interactive trajectories analysis using a linking and brushing approach.</li>
+  #     <li>Using socket API for client server communication between analysis script and UnityMol to generate dynamic plot</li>
+
+  #     <h4>Data communication:</h4>
+
+  #     <li>Extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+      
+
+      
+
+  #     </ul>
+
+  #     <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
+  # </ul>
+
+
 
 # Master internship with Dr. Dirk Stratmann
+# http://www-ext.impmc.upmc.fr/~stratmann/
 - company: Institute of Mineralogy, Physics of Materials and Cosmochemistry, Sorbonne Université - CNRS, France
-  position: Master internship with <a href="http://www-ext.impmc.upmc.fr/~stratmann/" itemprop="url">Dr. Dirk Stratmann</a>
+  position: Bioinformatics Drug Design Intern
   duration: 2019
   summary: >
     <ul class="resume-item-list">
-      <li>Development of a cyclic peptide docking method combining Autodock and REMD simulations with GROMACS.</li>
-      <li>Comparison with HADDOCK. Manual design of cyclic peptides with UCSF-Chimera.</li>
+      <li>
+        Developed a cyclic peptide docking method by combining Autodock with 
+        REMD simulations in GROMACS, and compared the results with the HADDOCK docking tool.
+      </li>
+      <li>Manual design of cyclic peptides with UCSF-Chimera.</li>
     </ul>
 
 # Master internship with Dr. Mathilde Carpentier
+# https://bioinfo.mnhn.fr/abi/people/mathilde/
 - company: Institute of Systematics, Evolution and Biodiversity, Sorbonne Université - CNRS, France
-  position: Master internship with <a href="https://bioinfo.mnhn.fr/abi/people/mathilde/" itemprop="url">Dr. Mathilde Carpentier</a>
+  position: Bioinformatics Structural Analysis Intern
   duration: 2018
   summary: >
     <ul class="resume-item-list">
-    <li>Contribution to the development of a new method to search for protein structural similarities in a bank.</li>
+    <li>
+      Contributed to developing a program for rapid protein structure similarity searches. (Python, C)
+    </li>
     </ul>
