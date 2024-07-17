@@ -52,7 +52,7 @@
       // Work with JSON data here
       // console.log(data);
       const commitDate = new Date(data[0].commit.committer.date);
-      const formattedDate = commitDate.toLocaleDateString(); // Format based on user's locale, without time
+      const formattedDate = commitDate.toLocaleDateString('en-GB'); // Format based on user's locale, without time
       // You can also use other formatting options, like toLocaleDateString(), toLocaleTimeString()
       document.getElementById('commitDate').innerHTML = formattedDate;
 
