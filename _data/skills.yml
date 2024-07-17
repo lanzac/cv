@@ -12,9 +12,9 @@
   description: Apple/Microsoft office suites, Website design (HTML/CSS), Authorea, \(\LaTeX\)
 
 # Programming
-- skill: Programming
-  description: Python3, \(\verb!C++11!\), \(\verb!C#!\), Bash, \(\verb!C!\), Unix
+- skill: Programming languages
+  description: Python3, \(\verb!C++11!\), \(\verb!C#!\), Bash, \(\verb!C!\), Unix, HTML, CSS
 
 # Development tools
 - skill: Development tools
-  description: git, lldb, CMake, Unity, Docker, Pixlr E
+  description: git, lldb, CMake, Unity, Docker, Pixlr E, Jekyll, MongoDB, Streamlit

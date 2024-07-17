@@ -298,6 +298,12 @@ html{scroll-behavior:smooth}
       font-size: 1.8rem;
       margin: 0 0 .2rem;
     }
+    .executive-summary {
+      @include sans;
+      font-size: 1.0rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
   .section-header {
     @include section_border_thin;

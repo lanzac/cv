@@ -6,8 +6,11 @@
   duration: Sep, 2023 &mdash; Jun, 2024
   summary: >
     <ul class="resume-item-list">
-      <li>Continuation of the development work on the <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a> web application prototype: extrapolation of the data explorer to integrate laboratory data.</li>
-      <li>Implement a local prototype with a corresponding datalake/dataverse.</li>
+      <li>Research: 
+      <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a>
+      web app for large-scale molecular simulation data analysis.
+      </li>
+      <li>Development: Molecular simulations software suite (\(\verb!C#!\), C++, Python, C)</li>
     </ul>
 
 

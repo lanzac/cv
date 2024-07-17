@@ -24,7 +24,7 @@
   description: Socket for data communication
   language: \(\verb!C!\)
 
-# TEA4U
+# LIPTUNE
 - software: LIPTUNE
   role: Designer & Developper
   duration: 2023
@@ -33,3 +33,13 @@
     The tool tests 4 methods to calibrate each amino acid and obtain a set of hydrophobicity parameters to improve protein insertion with the <a href="https://doi.org/10.1002/(SICI)1097-0134(19980301)30:4<357::AID-PROT3>3.0.CO;2-G">IMPALA</a> membrane analytical model. 
     The approach can be used for any type of representation, from atomic to coarse-grained scales.
   language: Python3
+
+# 
+- software: AlimBDD
+  role: Creator & Developper
+  duration: side-project
+  description: >
+    Food application (BDD: "base de donnée" in french) using MongoDB & Streamlit
+    BDD also stands for behaviour-driven development
+  language: Python3
+    
