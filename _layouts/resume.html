@@ -13,7 +13,7 @@
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
         {% if site.resume_avatar == 'true' %}
-        <img src="images/ma_photo_2.jpeg" alt="my photo" class="avatar no-print" itemprop="image">
+        <img src="images/ma_photo.jpg" alt="my photo" class="avatar no-print" itemprop="image">
         {% endif %}
 
         <!-- Your name is defined in the _config.yml file -->
@@ -95,7 +95,7 @@
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Experience 🖳</h2>
+          <h2>Experience <span class="emoji" style="transform: translateY(2px); max-height: 17px;">{% include icons/icon-computer.html %}</span></h2>
         </header>
 
         {% for job in site.data.experience %}
@@ -119,8 +119,9 @@
 
         <header class="section-header">
           <h2>Skills <span class="skills-header">
-            <span class="wheel-large">⛭</span>
-            <span class="wheel-middle">⛭</span>
+            <span class="emoji" style="transform: translateY(2px);">{% include icons/icon-gears.html %}</span>
+            <!-- <span class="wheel-large">⛭</span>
+            <span class="wheel-middle">⛭</span> -->
           </span></h2>
         </header>
         {% for skill in site.data.skills %}
@@ -141,7 +142,7 @@
       <!-- begin publications -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Publications & scientific production 🗐</h2>
+          <h2>Publications & scientific production <span class="emoji" style="transform: translateY(1px);">{% include icons/icon-articles.html %}</span></h2>
         </header>
 
         <h4 class="resume-item-title" id="publications">Publications:</h4>
@@ -239,7 +240,7 @@
       <!-- begin softwares -->
       <section class="content-section">
         <header class="section-header">
-          <h2>Softwares & Tools 🖫</h2>
+          <h2>Softwares & Tools <span class="emoji" style="transform: translateY(4px); min-height: 25px; min-width: 25px;">{% include icons/icon-floppy.html %}</span></h2>
         </header>
 
         <div class="executive-summary" itemprop="description">
@@ -271,7 +272,7 @@
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Outside Interests ♘</h2>
+          <h2>Outside Interests <span class="emoji" style="transform: translateY(4px);">{% include icons/icon-chess.html %}</span></h2>
         </header>
 
         <!-- <div class="resume-item">
