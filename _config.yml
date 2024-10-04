@@ -21,6 +21,7 @@ exclude:
   - LICENSE
   - README.md
   - README_template.md
+  - vendor
 
 keep_files:
   - CNAME
