@@ -54,6 +54,11 @@
     padding: .4rem 0;
     @include clearfix;
 
+    @media print {
+      border-bottom: none; // Ou border-bottom: 0;
+      font-size: 1rem;
+    }
+
     .header-status {
       @include sans;
       font-weight: 300;
@@ -357,11 +362,17 @@ html{scroll-behavior:smooth}
   .no-print { display: none !important }
   .print-only { display: block !important }
   body { font-size: 12px; line-height: 1rem; }
-  .page-header { padding: 1rem 0 .2rem;
+  .page-header { 
+    padding: 1rem 0 .2rem;
+    padding-bottom: 0rem;
+    text-align: center;
     .header-name {
       @include sans;
       font-size: 1.8rem;
-      margin: 0 0 .2rem;
+      margin: 1rem 0 0;
+      color: #999;
+      letter-spacing: -.15rem;
+      line-height: 1;
     }
     .executive-summary {
       @include sans;

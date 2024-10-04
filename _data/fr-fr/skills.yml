@@ -1,0 +1,20 @@
+# Skills
+# Langues
+- skill: Langues
+  description: Français (natif), Anglais (maîtrisé)
+
+# Scientific software
+- skill: Logiciels scientifiques
+  description: VMD, PyMol, APBS, GROMACS, NAMD, HADDOCK, Desmos, AutoDock, Chimera, HADDOCK
+
+# Communication
+- skill: Communication
+  description: Suites office Apple/Microsoft, Conception de site web (HTML/CSS), Authorea, \(\LaTeX\)
+
+# Programming
+- skill: Languages de programmation
+  description: Python3, \(\verb!C++11!\), \(\verb!C#!\), Bash, \(\verb!C!\), Unix, HTML, CSS
+
+# Development tools
+- skill: Outils de développement
+  description: git, gdb, lldb, CMake, Unity, Docker, Pixlr E, Jekyll, MongoDB, Streamlit

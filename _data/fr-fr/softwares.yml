@@ -1,0 +1,48 @@
+# Softwares
+
+# BioSpring
+- software: BioSpring
+  role: Développeur
+  duration: 2019 &mdash; 2024
+  # url: "#"
+  description: Moteur de simulation interactive basé sur un modèle étendu de réseau élastique
+  language: \(\verb!C++11!\)
+
+# UnityMol
+- software: UnityMol
+  role: Développeur
+  duration: 2019 &mdash; 2024
+  # url: "#"
+  description: Visualiseur moléculaire
+  language: \(\verb!C#!\)
+
+# MDDriver
+- software: MDDriver
+  role: Développeur
+  duration: 2019 &mdash; 2024
+  # url: "#"
+  description: Socket pour la communication de données
+  language: \(\verb!C!\)
+
+# LIPTUNE
+- software: LIPTUNE
+  role: Designer & Développeur
+  duration: 2023
+  description: > 
+    <i><b>L</b>everaging <b>I</b>MPALA <b>P</b>arameterization <b>T</b>echnique <b>U</b>sing <b>N</b>ew <b>E</b>nergies</i> <a href="#" data-scroll-to="publications">[4]</a>.
+    L'outil teste 4 méthodes pour calibrer chaque acide aminé et obtenir un ensemble de paramètres d'hydrophobicité afin d'améliorer l'insertion des protéines avec le modèle analytique de membrane <a href="https://doi.org/10.1002/(SICI)1097-0134(19980301)30:4<357::AID-PROT3>3.0.CO;2-G">IMPALA</a>.
+    L'approche peut être utilisée pour tout type de représentation, des échelles atomiques aux échelles à gros grains.
+  language: Python3
+
+# 
+- software: AlimBDD
+  role: Designer & Développeur
+  duration: 2024 &mdash; Now
+  description: >
+    Application qui effectue une analyse nutritionnelle détaillée en 
+    inventoriant des produits alimentaires et en analysant leurs nutriments.
+    L'application fournit aux utilisateurs une vue scientifique de leur apport 
+    alimentaire et permet des combinaisons expérimentales d'aliments pour 
+    optimiser la valeur nutritionnelle.
+  language: Python3, MongoDB, Streamlit
+    

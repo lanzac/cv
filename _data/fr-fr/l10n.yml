@@ -1,0 +1,36 @@
+lang_name: "FR"
+
+resume_status: "Bioinformaticien | Développeur scientifique"
+
+resume_section_experience_title:     "Expériences professionnelles"
+resume_section_education_title:      "Formation"
+resume_section_projects_title:       "Projets"
+resume_section_skills_title:         "Compétences"
+resume_section_recognition_title:    "Distinctions"
+resume_section_links_title:          "Liens supplémentaires"
+resume_section_associations_title:   "Associations"
+resume_section_softwares_title:      "Logiciels & Outils"
+resume_section_interests_title:      "Activités extra-professionnelles"
+resume_section_publications_title:   "Publications & Productions scientifiques"
+resume_section_social_links_title:   "Réseaux sociaux"
+
+resume_header_intro: >
+  <p>Je suis bioinformaticien spécialisé en bioinformatique structurale et en 
+  simulations à grande échelle, travaillant à l'intersection de la physique, de 
+  la chimie et de l'informatique. Je me suis particulièrement concentré sur le 
+  développement et la mise en œuvre d'une suite logicielle complète pour les 
+  simulations moléculaires interactives (IMS), permettant une interaction 
+  humaine en temps réel avec les simulations en cours, notamment pour étudier 
+  le profil d'insertion des protéines membranaires. Actuellement, je me 
+  spécialise davantage en tant que développeur scientifique, améliorant mes 
+  compétences en génie logiciel, en particulier en architecture logicielle.</p>
+
+resume_printed_resume_link: "La version maintenue est accessible en ligne à l'adresse https://lanzac.github.io/cv/"
+
+
+intro_section_software: >
+  <p>
+    J'ai poursuivi le développement de BioSpring, UnityMol et MDDriver pendant 
+    ma thèse, et ils sont actuellement mes projets secondaires. Ce sont des 
+    projets développés par l'équipe de Marc Baaden au Laboratoire de Biochimie Théorique.
+  </p>

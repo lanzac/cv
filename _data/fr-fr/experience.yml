@@ -1,0 +1,138 @@
+# Jobs
+
+# Reseach engineer
+- company: Laboratoire de Biochimie Théorique - CNRS, France
+  position: Ingénieur de recherche
+  duration: Sept. 2023 &mdash; Juin. 2024
+  summary: >
+    <ul class="resume-item-list">
+      <li><b>Recherche</b>: Application web 
+      <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a>
+      pour l'analyse de données de simulation moléculaire à grande échelle
+      </li>
+      <li><b>Développement</b>: 
+      Suite logicielle de simulations moléculaires (Unity, \(\verb!C#!\), C++, Python, C)</li>
+    </ul>
+
+
+# Research Assistant
+- company: Laboratoire de Biochimie Théorique - CNRS, France
+  position: Assistant de recherche
+  duration: Nov. 2019 &mdash; Avr. 2023
+  summary: >
+    <ul class="resume-item-list">
+    
+      <li>Auteur principal d'une revue avancée sur les simulations moléculaires interactives (IMS) <a href="#" data-scroll-to="[1]">[1]</a></li>
+      <li>
+        Développement d'une suite logicielle intégrant la visualisation et la simulation moléculaire avec l'interaction humaine <a href="#" data-scroll-to="[3]">[2,3]</a>
+        (Unity, \(\verb!C#!\), C++, Python, C)
+      </li>
+        
+
+
+# <ul class="resume-item-list">
+#   <h4>Development in \(\verb!C#!\) of UnityMol visualization software</h4>
+
+#   <li>Leveraged game engine for developing interactive protein-membrane insertion simulations</li>
+#   <li>Created hybrid XML/UIs and APIs for communication with BioSpring</li>
+
+
+#   <h4>Development in C++ of BioSpring molecular simulation engine:</h4>
+
+#   <li> Adapted classical molecular dynamics to rigid body and coarse-grain simulations in arbitrarily shaped implicit membranes</li>
+  
+#   <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
+
+#   <li>Data analysis scripts with Python graphical tools and Jupyter</li>
+#   <li>Establish Unity-Python-TCP-Server for direct data exchange with Unity for dynamic plotting</li>
+#   <li>Linking and brushing plot for trajectories analysis using a hybrid Python/HTML code.</li>
+
+#   <h4>Data communication:</h4>
+
+#   <li>Established a formalized, thread-safe client-server data exchange protocol with buffering and function callbacks
+#   (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+  
+#   </ul>
+
+#   <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
+# </ul>
+
+  # <ul class="resume-item-list">
+  #   <li>Lead author of an advanced review on interactive molecular simulations (IMS) <a href="#" data-scroll-to="[1]">[1]</a></li>
+  #   <li>Development of a software suite integrating visualisation and molecular simulation with human interaction <a href="#" data-scroll-to="[3]">[2,3]</a>:</li>
+  #     <ul class="resume-item-list">
+
+
+
+  #     <h4>Development in \(\verb!C#!\) of UnityMol visualization software</h4>
+
+  #     <li>Automatic generation of Unity UIs from personal XML parameter files</li>
+
+  #     <li>Algorithms for curved membrane mesh generation</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/OmpA_curved_10Aoffset.mp4" type="video/mp4"></video>
+
+  #     <li>Graphical and controls features dedicated for preparing and interact with simulations</li>
+
+  #     <li>Prototype that feature steering by predefined contraints (inpired by Ambiguous Interaction Restraints (AIRs) method from the <a href="https://pubmed.ncbi.nlm.nih.gov/12580598/" itemprop="url">HADDOCK</a> docking program) for docking interactive experiments <a href="#" data-scroll-to="posters">(1)</a>.</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/bs_haddock.mp4" type="video/mp4"></video>
+
+
+
+  #     <h4>Development in C++ of BioSpring molecular simulation engine:</h4>
+
+  #     <li> Rigid body dynamics simulation algorithm with quaternion rotation for membrane insertion to take account of the calculation constraint on a local machine</li>
+      
+  #     <li>Integration of a dynamic SASA calculation method for protein complex assembly</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/sasa_interface_zoom.mp4" type="video/mp4"></video>
+      
+  #     <li>Automating sampling algorithm of protein positions within membrane</li>
+  #     <video class="video" width=400 loop autoplay muted><source src="videos/exhaust_sampl_OmpA.mp4" type="video/mp4"></video>
+
+
+
+  #     <h4>Development in Python3 of analysis scripts of molecular simulations data:</h4>
+
+  #     <li>Prepration simulation tool for BioSpring (system preparation, parameter management, representation)</li>
+  #     <li>Reactive plot for interactive trajectories analysis using a linking and brushing approach.</li>
+  #     <li>Using socket API for client server communication between analysis script and UnityMol to generate dynamic plot</li>
+
+  #     <h4>Data communication:</h4>
+
+  #     <li>Extension for bidirectional data exchange between visualization and simulation modules (wrapper and data management in \(\verb!C#!\) and \(\verb!C++!\), socket transfer protocole in \(\verb!C!\))</li>
+      
+
+      
+
+  #     </ul>
+
+  #     <li>Application to a double membrane system and to a curved viral membrane of arbitrary shape</li>
+  # </ul>
+
+
+
+# Master internship with Dr. Dirk Stratmann
+# http://www-ext.impmc.upmc.fr/~stratmann/
+- company: Institute of Mineralogy, Physics of Materials and Cosmochemistry, Sorbonne Université - CNRS, France
+  position: Stagiaire en conception de médicaments en bioinformatique
+  duration: 2019
+  summary: >
+    <ul class="resume-item-list">
+      <li>
+        Développement d'une méthode d'amarrage de peptides cycliques en 
+        combinant Autodock avec des simulations REMD dans GROMACS, et 
+        comparaison des résultats avec l'outil d'amarrage HADDOCK.
+      </li>
+      <li>Conception manuelle de peptides cycliques avec UCSF-Chimera.</li>
+    </ul>
+
+# Master internship with Dr. Mathilde Carpentier
+# https://bioinfo.mnhn.fr/abi/people/mathilde/
+- company: Institute of Systematics, Evolution and Biodiversity, Sorbonne Université - CNRS, France
+  position: Stagiaire en analyse structurale en bioinformatique.
+  duration: 2018
+  summary: >
+    <ul class="resume-item-list">
+    <li>
+      Contribution au développement d'un programme pour des recherches rapides de similarité de structures protéiques. (Python, C)
+    </li>
+    </ul>
