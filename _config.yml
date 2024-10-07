@@ -38,6 +38,7 @@ languages: ["en-us", "fr-fr"]
 default_lang: "en-us"
 exclude_from_localizations: ["assets"]
 parallel_localization: true
+baseurl: "/cv"
 
 # Resume settings
 resume_avatar:                  "true"
