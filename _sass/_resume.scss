@@ -38,6 +38,7 @@
     letter-spacing: -.15rem;
     line-height: 1;
     margin: 1rem 0 0;
+    padding-bottom: 1rem;
   }
 
   .header-contact-info {
@@ -79,16 +80,17 @@
     padding-top: 1.5rem;
     text-align: center;
     padding-bottom: 0rem;
+  }
 
-    .header-line {
-      margin: 0;
-      font-size: .875rem;
-      color: #999;
+  .header-line {
+    margin: 0;
+    font-size: .875rem;
+    color: #999;
+    text-align: center;
 
-      > a {
-        font-weight: 700;
-        color: #333;
-      }
+    > a {
+      font-weight: 700;
+      color: #333;
     }
   }
 
@@ -362,7 +364,7 @@ html{scroll-behavior:smooth}
   .no-print { display: none !important }
   .print-only { display: block !important }
   body { font-size: 12px; line-height: 1rem; }
-  .page-header { 
+  .page-header {
     padding: 1rem 0 .2rem;
     padding-bottom: 0rem;
     text-align: center;

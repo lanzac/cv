@@ -19,10 +19,10 @@
         <!-- Your name is defined in the _config.yml file -->
         <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
 
-        <div class="page-header">
-          <!-- <h4 class="resume-item-title print-only">{{ site.data.l10n.resume_printed_resume_link }}</h4> -->
-          <p class="header-line">{{ site.resume_title }}</p>
-        </div>
+        {% if site.display_resume_title == 'true' %}
+        <!-- <h4 class="resume-item-title print-only">{{ site.data.l10n.resume_printed_resume_link }}</h4> -->
+        <p class="header-line">{{ site.resume_title }}</p>
+        {% endif %}
 
         <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
         {% if site.display_header_contact_info == 'true' %}

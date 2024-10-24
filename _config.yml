@@ -44,6 +44,7 @@ baseurl: "/cv"
 resume_avatar:                  "true"
 resume_name:                    "André Lanrezac"
 resume_title:                   "Curriculum vitæ"
+display_resume_title:           "false"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "a.lanrezac@gmail.com"
