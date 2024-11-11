@@ -28,12 +28,15 @@ jobs:
       - name: Build with Jekyll (Test)
         uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
-          provider: 'test'                 # Use 'test' provider to build the site without deploying
-          jekyll_src: './'                 # Jekyll source directory
-          jekyll_cfg: '_config.yml'        # Jekyll configuration file
-          ruby_ver: '3.2.2'                 # Ruby version
-          bundler_ver: '2.4.19'             # Bundler version
-
+          provider: 'test'
+          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
+          repository: 'lanzac/cv'
+          branch: 'gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './'           # Default is root directory
+          jekyll_cfg: '_config.yml'  # Default is _config.yml
+          ruby_ver: '3.2.2'
+          bundler_ver: '2.4.19'         # Default is latest bundler version
+          pre_build_commands: ''     # Installing additional dependencies (Arch Linux) 
       - name: Verify _site Directory
         run: |
           if [ ! -d "_site" ]; then
@@ -106,11 +109,12 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
-          provider: 'github'                # Use 'github' provider to deploy to GitHub Pages
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: 'lanzac/cv'           # Replace with your own repository
-          branch: 'gh-pages'                # Deployment branch
-          jekyll_src: '_site'               # Jekyll source directory for deployment
-          jekyll_cfg: '_config.yml'         # Jekyll configuration file
-          ruby_ver: '3.2.2'                  # Ruby version
-          bundler_ver: '2.4.19'              # Bundler version
+          provider: 'github'
+          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
+          repository: 'lanzac/cv'
+          branch: 'gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './'           # Default is root directory
+          jekyll_cfg: '_config.yml'  # Default is _config.yml
+          ruby_ver: '3.2.2'
+          bundler_ver: '2.4.19'         # Default is latest bundler version
+          pre_build_commands: ''     # Installing additional dependencies (Arch Linux) 
