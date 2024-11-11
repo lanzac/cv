@@ -34,15 +34,9 @@ jobs:
           branch: 'gh-pages'         # Default is gh-pages for github provider
           jekyll_src: './'           # Default is root directory
           jekyll_cfg: '_config.yml'  # Default is _config.yml
-          ruby_ver: '3.2.2'
-          bundler_ver: '2.4.19'         # Default is latest bundler version
-          pre_build_commands: ''     # Installing additional dependencies (Arch Linux) 
-      - name: Verify _site Directory
-        run: |
-          if [ ! -d "_site" ]; then
-            echo "Error: _site directory not found!"
-            exit 1
-          fi
+          ruby_ver:
+          bundler_ver:        # Default is latest bundler version
+          pre_build_commands: 'gem install bundler'     # Installing additional dependencies (Arch Linux) 
 
       - name: Upload _site as artifact
         uses: actions/upload-artifact@v3
@@ -63,9 +57,6 @@ jobs:
         with:
           name: site_files
           path: _site
-
-      - name: List _site contents
-        run: ls -R _site
 
       # Generate the PDF in English
       - name: Generate en-us PDF
