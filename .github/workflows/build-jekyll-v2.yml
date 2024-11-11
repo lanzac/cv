@@ -21,32 +21,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Install Ruby
-      - name: Install asdf
-        run: |
-          git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
-          echo ". $HOME/.asdf/asdf.sh" >> $GITHUB_ENV
-          echo ". $HOME/.asdf/completions/asdf.bash" >> $GITHUB_ENV
+      - uses: actions/cache@v2
+        with:
+          path: _vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
       
-      - name: Install asdf Ruby plugin
-        run: |
-          source $HOME/.asdf/asdf.sh
-          asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-
-      - name: Install Ruby
-        run: |
-          source $HOME/.asdf/asdf.sh
-          asdf install ruby 3.2.2
-          asdf global ruby 3.2.2
-
-      - name: Check Ruby version
-        run: ruby -v
-      # ------------------------------------------------------------------------
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll (Test)
+      - name: Build with Jekyll
         uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
           provider: 'github'
@@ -64,7 +46,7 @@ jobs:
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: _site/index.html
-          outputFile: _site/resume_en-us.pdf
+          outputFile: resume_en-us.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       # Generate the PDF in French
@@ -72,14 +54,11 @@ jobs:
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: _site/fr-fr/index.html
-          outputFile: _site/fr-fr/resume_fr-fr.pdf
+          outputFile: resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Upload _site as artifact
         uses: actions/upload-artifact@v3
-        with:
-          name: site_files
-
 
   # Job 3: Deploy the site with PDFs to GitHub Pages
   deploy:
@@ -89,13 +68,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download site with PDFs
-        uses: actions/download-artifact@v3
+      - uses: actions/cache@v2
         with:
-          name: site_files
-
-      - name: List _site contents after PDFs
-        run: ls -R _site
+          path: _vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
 
       - name: Deploy to GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.6.0
