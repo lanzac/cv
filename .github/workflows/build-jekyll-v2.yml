@@ -15,8 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Job 1: Build and verify Jekyll site with 'test' provider
-  build_test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -79,7 +78,7 @@ jobs:
   # Job 3: Deploy the site with PDFs to GitHub Pages
   deploy:
     runs-on: ubuntu-latest
-    needs: generate_pdf
+    needs: build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
