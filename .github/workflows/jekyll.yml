@@ -47,6 +47,22 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      
+      - name: Generate en-us PDF
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: _site/index.html
+          outputFile: _site/resume_en-us.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      # Generate the PDF in French
+      - name: Generate fr-fr PDF
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: _site/fr-fr/index.html
+          outputFile: _site/fr-fr/resume_fr-fr.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+      
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
