@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -56,24 +56,6 @@ jobs:
           htmlFile: _site/fr-fr/index.html
           outputFile: resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
-
-      - name: Upload _site as artifact
-        uses: actions/upload-artifact@v3
-
-  # Job 3: Deploy the site with PDFs to GitHub Pages
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - uses: actions/cache@v2
-        with:
-          path: _vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
 
       - name: Deploy to GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.6.0

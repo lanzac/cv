@@ -12,16 +12,16 @@ sass:
   style: compressed
 
 # Includes & excludes
-include: ["_pages"]
+# include: ["_pages"]
 
-exclude:
-  - Dockerfile
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - README_template.md
-  - vendor
+# exclude:
+#   - Dockerfile
+#   - Gemfile
+#   - Gemfile.lock
+#   - LICENSE
+#   - README.md
+#   - README_template.md
+#   - vendor
 
 keep_files:
   - CNAME
