@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>André Lanrezac CV</title>
+
+  <!-- Google font typography settings - defined in _config.yml -->
+  
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
+  
+
+  <meta name="description" content="André Lanrezac Curriculum vitæ">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="canonical" href="/cv/">
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+  <base target="_blank">
+  <script
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"
+    type="text/javascript">
+  </script>
+
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ubuntu-mono-2" rel="stylesheet">                
+
+  <script>
+    // Fonction pour gérer le clic sur les liens avec l'attribut data-scroll-to
+    document.addEventListener("click", function (event) {
+        const target = event.target;
+
+        // Vérifie si l'élément cliqué est un lien avec l'attribut data-scroll-to
+        if (target.tagName === "A" && target.hasAttribute("data-scroll-to")) {
+            const targetId = target.getAttribute("data-scroll-to");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                event.preventDefault();
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+</script>
+
+  <script type="text/javascript">
+    var apiUrl = 'https://api.github.com/repos/lanzac/resume/commits?per_page=1';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+      // console.log(data);
+      const commitDate = new Date(data[0].commit.committer.date);
+      const formattedDate = commitDate.toLocaleDateString('en-GB'); // Format based on user's locale, without time
+      // You can also use other formatting options, like toLocaleDateString(), toLocaleTimeString()
+      document.getElementById('commitDate').innerHTML = formattedDate;
+
+    }).catch(err => {
+      // Do something for an error here
+    });
+</script>
+
+
+</head>
+
+
+  <body class="theme-default">
+
+    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="telephone" content="(+33) 665375668"/>
+      <meta itemprop="address" content=""/>
+
+      <header class="page-header">
+
+        <!-- You can turn off the avatar in _config.yml by setting to false -->
+        
+
+        <!-- Your name is defined in the _config.yml file -->
+        <h1 class="header-name" itemprop="name">André Lanrezac</h1>
+
+        
+
+        <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
+        
+
+        <div class="status-bar">
+
+          <!-- Your title is also defined in the _config.yml file -->
+
+          <h2 class="header-status" itemprop="jobTitle">Bioinformatician | Scientific Developer</h2>
+
+          <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
+          <!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
+
+<!-- Check on https://www.svgrepo.com to edit svg  -->
+
+
+<ul class="icon-links no-print">
+
+  <!-- GitHub link -->
+  
+  <li class="icon-link-item">
+    <a href="https://github.com/lanzac" class="icon-link" itemprop="sameAs">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve" width="28">
+<path id="GitHub" fill-rule="evenodd" clip-rule="evenodd" fill="#D1CECC" d="M14.01,0C6.27,0-0.01,6.28-0.01,14.02
+  c0,6.19,4.02,11.45,9.59,13.3c0.7,0.13,0.96-0.3,0.96-0.68c0-0.33-0.01-1.21-0.02-2.38c-3.9,0.85-4.72-1.88-4.72-1.88
+  c-0.64-1.62-1.56-2.05-1.56-2.05c-1.27-0.87,0.1-0.85,0.1-0.85c1.41,0.1,2.15,1.44,2.15,1.44c1.25,2.14,3.28,1.52,4.08,1.16
+  c0.13-0.91,0.49-1.52,0.89-1.87c-3.11-0.35-6.38-1.56-6.38-6.93c0-1.53,0.55-2.78,1.44-3.76C6.37,9.17,5.89,7.74,6.65,5.81
+  c0,0,1.18-0.38,3.85,1.44c1.12-0.31,2.32-0.47,3.51-0.47c1.19,0.01,2.39,0.16,3.51,0.47c2.68-1.81,3.85-1.44,3.85-1.44
+  c0.76,1.93,0.28,3.35,0.14,3.71c0.9,0.98,1.44,2.23,1.44,3.76c0,5.38-3.28,6.57-6.4,6.92c0.5,0.43,0.95,1.29,0.95,2.6
+  c0,1.87-0.02,3.39-0.02,3.84c0,0.37,0.25,0.81,0.96,0.67c5.56-1.86,9.58-7.11,9.58-13.3C28.03,6.28,21.75,0,14.01,0z"/>
+</svg>
+
+      <span class="tooltip">GitHub</span>
+    </a>
+  </li>
+  
+
+  <!-- Twitter link -->
+  
+
+  <!-- Medium link -->
+  
+
+  <!-- Dribbble link -->
+  
+
+  <!-- Facebook link -->
+  
+
+  <!-- LinkedIn link -->
+  
+  <li class="icon-link-item">
+    <a href="https://www.linkedin.com/in/andre-lanrezac" class="icon-link" itemprop="sameAs">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve" width="28">
+<path id="LinkedIn" fill="#D1CECC" d="M18.82,15.09v3.61h-2.09v-3.37c0-0.85-0.3-1.42-1.06-1.42c-0.58,0-0.92,0.39-1.07,0.77
+  c-0.06,0.13-0.07,0.32-0.07,0.51v3.52h-2.09c0,0,0.03-5.71,0-6.3h2.09v0.89c0,0.01-0.01,0.01-0.01,0.02h0.01V13.3
+  c0.28-0.43,0.77-1.04,1.89-1.04C17.79,12.25,18.82,13.16,18.82,15.09z M9.18,18.7h2.09v-6.3H9.18V18.7z M10.24,9.36
+  c-0.72,0-1.19,0.47-1.19,1.09c0,0.61,0.45,1.09,1.16,1.09h0.01c0.73,0,1.18-0.48,1.18-1.09C11.39,9.84,10.95,9.36,10.24,9.36z
+   M28,14c0,7.73-6.27,14-14,14S0,21.73,0,14S6.27,0,14,0S28,6.27,28,14z M20.93,8.02c0-0.55-0.46-1-1.02-1H8.09
+  c-0.57,0-1.02,0.45-1.02,1v11.96c0,0.55,0.46,1,1.02,1h11.82c0.57,0,1.02-0.45,1.02-1V8.02z"/>
+</svg>
+
+      <span class="tooltip">LinkedIn</span>
+    </a>
+  </li>
+  
+
+  <!-- Instagram link -->
+  
+
+  <!-- Website link -->
+  
+
+  <!-- ResearchGate link -->
+  
+  <li class="icon-link-item">
+    <a href="https://www.researchgate.net/profile/Andre-Lanrezac" class="icon-link" itemprop="url">
+      <svg class="icon" fill="#ffffff" width="28px" height="28px" viewBox="-7.44 -7.44 38.88 38.88" role="img" xmlns="http://www.w3.org/2000/svg">
+    <g id="SVGRepo_bgCarrier" stroke-width="0">
+      <rect x="-7.44" y="-7.44" width="38.88" height="38.88" rx="19.44" fill="#D1CECC" strokewidth="0"></rect>
+    </g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <title>ResearchGate icon</title>
+      <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+      <span class="tooltip">ResearchGate</span>
+    </a>
+  </li>
+  
+
+  <!-- ORCID link -->
+  
+  <li class="icon-link-item">
+    <a href="https://orcid.org/0000-0003-2069-4161" class="icon-link" itemprop="url">
+      <svg class="icon" fill="#ffffff"  width="28px" height="28px" viewBox="-3.2 -3.2 38.40 38.40" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+    <g id="SVGRepo_bgCarrier" stroke-width="0">
+        <rect x="-3.2" y="-3.2" width="38.40" height="38.40" rx="19.2" fill="#D1CECC" strokewidth="0"></rect>
+    </g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier"> 
+        <title >ORCID</title>
+        <path d="M16 0c-8.839 0-16 7.161-16 16s7.161 16 16 16c8.839 0 16-7.161 16-16s-7.161-16-16-16zM9.823 5.839c0.704 0 1.265 0.573 1.265 1.26 0 0.688-0.561 1.265-1.265 1.265-0.692-0.004-1.26-0.567-1.26-1.265 0-0.697 0.563-1.26 1.26-1.26zM8.864 9.885h1.923v13.391h-1.923zM13.615 9.885h5.197c4.948 0 7.125 3.541 7.125 6.703 0 3.439-2.687 6.699-7.099 6.699h-5.224zM15.536 11.625v9.927h3.063c4.365 0 5.365-3.312 5.365-4.964 0-2.687-1.713-4.963-5.464-4.963z"></path> 
+    </g>
+</svg>
+      <span class="tooltip">ORCID</span>
+    </a>
+  </li>
+  
+
+  <!-- Mail link -->
+  
+  <li class="icon-link-item">
+    <a href="mailto:a.lanrezac@gmail.com" class="icon-link" itemprop="sameAs">
+      <svg class="icon" width="28px" height="28px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" viewBox="-7.44 -7.44 38.88 38.88" role="img" xmlns="http://www.w3.org/2000/svg">
+    <g id="SVGRepo_bgCarrier" stroke-width="0">
+      <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#D1CECC" strokewidth="0"></rect>
+    </g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+      <span class="tooltip">Mail</span>
+    </a>
+  </li>
+  
+
+  <!-- Telephone link -->
+  
+
+</ul>
+
+
+        </div>
+
+        <div class="executive-summary no-print" itemprop="description">
+          <p>I am a bioinformatician specialized in structural bioinformatics and large-scale simulations, working at the intersection of physics, chemistry, and computer science. I have particularly focused on developing and implementing a comprehensive software suite for interactive molecular simulations (IMS), enabling real-time human interaction with ongoing simulations, especially for studying the insertion profile of membrane proteins. Currently, I am further specializing as a scientific developer, enhancing my skills in software engineering, in particular software architecture.</p>
+
+        </div>
+
+        
+        
+
+      </header>
+
+      <!-- Some cool emoji sites:
+      https://symbl.cc
+      https://www.compart.com/en/unicode/ -->
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -EDUCATION------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin Education -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Education <span class="emoji" style="transform: translateY(4px);"><svg fill="#6F4E37" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 477.005 477.005" xml:space="preserve" stroke="#6F4E37" stroke-width="9.5401"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M7.075,204.297l71.191,34.293v57.087c0,4.801,2.75,9.178,7.075,11.262l136.194,65.605c1.692,0.814,3.546,1.237,5.425,1.237 h22.886c1.879,0,3.732-0.423,5.426-1.237l135.817-65.425c2.633-1.27,4.738-3.42,5.95-6.079c0.171-0.375,0.334-0.754,0.497-1.134 c0.663-1.552,1.005-3.223,1.005-4.91v-56.407l19.419-9.354v77.412c-4.202,2.801-7.441,6.998-9.01,12.109l-11.049,36.002 c-1.361,4.44-1.324,9.124,0.109,13.542l10.246,31.578c2.922,9.007,11.245,15.254,20.709,15.545 c0.063,0.002,0.125,0.003,0.188,0.004l0.312,0.005c0.065,0.001,0.13,0.001,0.196,0.001c9.304,0,17.52-5.594,20.931-14.253 l11.847-30.072c1.828-4.637,2.059-9.824,0.65-14.605L452.043,319c-1.539-5.229-4.806-9.522-9.083-12.368v-89.438l26.97-12.992 c4.325-2.084,7.075-6.46,7.075-11.262v-9.955c0-4.801-2.75-9.178-7.075-11.262L243.827,62.81c-3.429-1.651-7.422-1.651-10.85,0 L7.075,171.628C2.75,173.711,0,178.088,0,182.89v10.146C0,197.837,2.75,202.213,7.075,204.297z M429.886,385.539l-7.853-24.202 l8.376-27.295l8.456,28.704L429.886,385.539z M373.54,287.824l-126.548,60.959h-17.179l-126.547-60.959v-37.19l129.712,62.483 c1.714,0.826,3.569,1.238,5.425,1.238s3.71-0.412,5.425-1.238l129.713-62.482L373.54,287.824L373.54,287.824z M238.402,87.946 l207.632,100.017l-63.763,30.715c-0.562,0.178-1.116,0.387-1.656,0.646L238.402,287.83L96.19,219.324 c-0.539-0.259-1.093-0.468-1.654-0.646l-63.764-30.716L238.402,87.946z"></path> </g> </g></svg></span></h2>
+        </header>
+
+        
+        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+          <h4 class="resume-item-title group" itemprop="description">Ph.D. in Bioinformatics - Chemistry Physics &bull; Nov, 2019 &mdash; Apr, 2023</h4>
+          <h3 class="resume-item-details" itemprop="name">Laboratory of Theoretical Biochemistry - CNRS, France</h3>
+          <!-- <h5 class="resume-item-details award-title" itemprop="description"></h5> -->
+          <!-- <p class="resume-item-copy" itemprop="description">
+            <ul class="resume-item-list">
+              
+            </ul>
+          <p class="resume-item-copy">"Interpretation of experimental data through interactive simulation and molecular visualization"</p> -->
+          <p class="resume-item-copy"  itemprop="description">"Interpretation of experimental data through interactive simulation and molecular visualization"</p>
+        </div>
+        
+        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+          <h4 class="resume-item-title group" itemprop="description">M.S. in Bioinformatics and Modelisation &bull; 2017 &mdash; 2019</h4>
+          <h3 class="resume-item-details" itemprop="name">Sorbonne Université, Paris</h3>
+          <!-- <h5 class="resume-item-details award-title" itemprop="description"></h5> -->
+          <!-- <p class="resume-item-copy" itemprop="description">
+            <ul class="resume-item-list">
+              
+            </ul>
+          <p class="resume-item-copy">Structural bioinformatics and modelisation</p> -->
+          <p class="resume-item-copy"  itemprop="description">Structural bioinformatics and modelisation</p>
+        </div>
+        
+        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+          <h4 class="resume-item-title group" itemprop="description">B.S. in Molecular and cellular biology &bull; 2014 &mdash; 2017</h4>
+          <h3 class="resume-item-details" itemprop="name">Université Pierre et Marie Curie, Paris</h3>
+          <!-- <h5 class="resume-item-details award-title" itemprop="description"></h5> -->
+          <!-- <p class="resume-item-copy" itemprop="description">
+            <ul class="resume-item-list">
+              
+            </ul>
+          <p class="resume-item-copy">Biology, Bioinformatics</p> -->
+          <p class="resume-item-copy"  itemprop="description">Biology, Bioinformatics</p>
+        </div>
+        
+      </section>
+      <!-- end Education -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -EXPERIENCE------------------------------------------------------ -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin Experience -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Experience <span class="emoji" style="transform: translateY(2px); max-height: 17px;"><svg viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#6F4E37"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#6F4E37;stroke-miterlimit:10;stroke-width:2.16;}</style></defs><line class="cls-1" x1="8.18" y1="22.5" x2="9.14" y2="17.73"></line><line class="cls-1" x1="5.32" y1="22.5" x2="18.68" y2="22.5"></line><rect class="cls-1" x="1.5" y="1.5" width="21" height="16.23" rx="1.91"></rect><line class="cls-1" x1="15.75" y1="22.5" x2="14.8" y2="17.73"></line><line class="cls-1" x1="1.5" y1="13.91" x2="22.5" y2="13.91"></line></g></svg></span></h2>
+        </header>
+
+        
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h4 class="resume-item-title" itemprop="name">Reseach engineer</h4>
+          <p class="resume-item-details" itemprop="description">Laboratory of Theoretical Biochemistry, CNRS, France &bull; Sep, 2023 &mdash; Jun, 2024</p>
+          <p class="resume-item-copy"><ul class="resume-item-list">
+  <li><b>Research</b>: 
+  <a href="https://www.biorxiv.org/content/10.1101/2023.05.02.538537v1"> MDverse</a>
+  web app for large-scale molecular simulation data analysis.
+  </li>
+  <li><b>Development</b>: 
+  Molecular simulations software suite (Unity, \(\verb!C#!\), C++, Python, C)</li>
+</ul>
+</p>
+        </div><!-- end of resume-item -->
+        
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h4 class="resume-item-title" itemprop="name">Research Assistant</h4>
+          <p class="resume-item-details" itemprop="description">Laboratory of Theoretical Biochemistry, CNRS, France &bull; Nov, 2019 &mdash; Apr, 2023</p>
+          <p class="resume-item-copy"><ul class="resume-item-list">
+  <li>Lead author of an advanced review on interactive molecular simulations (IMS) <a href="#" data-scroll-to="[1]">[1]</a></li>
+  <li>
+    Development of a software suite integrating visualisation and molecular 
+    simulation with human interaction <a href="#" data-scroll-to="[3]">[2,3]</a>
+    (Unity, \(\verb!C#!\), C++, Python, C)
+  </li>
+    
+</p>
+        </div><!-- end of resume-item -->
+        
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h4 class="resume-item-title" itemprop="name">Bioinformatics Drug Design Intern</h4>
+          <p class="resume-item-details" itemprop="description">Institute of Mineralogy, Physics of Materials and Cosmochemistry, Sorbonne Université - CNRS, France &bull; 2019</p>
+          <p class="resume-item-copy"><ul class="resume-item-list">
+  <li>
+    Developed a cyclic peptide docking method by combining Autodock with 
+    REMD simulations in GROMACS, and compared the results with the HADDOCK docking tool.
+  </li>
+  <li>Manual design of cyclic peptides with UCSF-Chimera.</li>
+</ul>
+</p>
+        </div><!-- end of resume-item -->
+        
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h4 class="resume-item-title" itemprop="name">Bioinformatics Structural Analysis Intern</h4>
+          <p class="resume-item-details" itemprop="description">Institute of Systematics, Evolution and Biodiversity, Sorbonne Université - CNRS, France &bull; 2018</p>
+          <p class="resume-item-copy"><ul class="resume-item-list"> <li>
+  Contributed to developing a program for rapid protein structure similarity searches. (Python, C)
+</li> </ul></p>
+        </div><!-- end of resume-item -->
+        
+
+      </section>
+      <!-- end Experience -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -SKILLS---------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills <span class="skills-header">
+            <span class="emoji" style="transform: translateY(2px);"><svg fill="#6F4E37" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 573.846 573.845" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M306,195.235v-40.8l-52.612-11.689c-1.795-5.61-4.08-10.989-6.746-16.15l28.968-45.526l-28.853-28.852l-45.526,28.968 c-5.161-2.666-10.54-4.95-16.15-6.746L173.4,21.835h-40.8l-11.689,52.611c-5.61,1.795-10.989,4.08-16.15,6.746L59.235,52.225 L30.382,81.077l28.968,45.526c-2.666,5.161-4.951,10.54-6.746,16.15L0,154.435v40.8l52.612,11.689 c1.795,5.61,4.08,10.989,6.746,16.15l-28.968,45.526l28.853,28.852l45.526-28.968c5.161,2.666,10.54,4.95,16.15,6.746 l11.683,52.605h40.8l11.689-52.612c5.61-1.795,10.989-4.08,16.15-6.746l45.526,28.968l28.853-28.852l-28.968-45.526 c2.666-5.162,4.951-10.54,6.746-16.15L306,195.235z M153,225.835c-28.166,0-51-22.834-51-51c0-28.166,22.834-51,51-51 s51,22.834,51,51C204,203.001,181.166,225.835,153,225.835z M371.77,491.729l12.859-31.402l-36.815-25.582 c0.388-4.882,0.319-9.744-0.103-14.552l36.646-25.915l-13.117-31.3l-44.173,7.956c-3.135-3.673-6.549-7.134-10.302-10.282 l7.582-44.18l-31.402-12.858l-25.582,36.815c-4.882-0.388-9.744-0.32-14.552,0.102l-25.915-36.646l-31.3,13.117l7.956,44.173 c-3.672,3.135-7.133,6.549-10.282,10.303l-44.18-7.582l-12.858,31.402l36.815,25.581c-0.388,4.883-0.32,9.744,0.102,14.552 l-36.645,25.915l13.117,31.301l44.172-7.956c3.135,3.672,6.549,7.133,10.302,10.281l-7.582,44.18l31.402,12.858l25.582-36.814 c4.882,0.388,9.745,0.319,14.552-0.103l25.915,36.646l31.301-13.117l-7.956-44.173c3.672-3.128,7.133-6.549,10.281-10.302 L371.77,491.729z M244.351,467.065c-21.678-8.874-32.062-33.646-23.188-55.331c8.874-21.686,33.646-32.062,55.332-23.188 c21.678,8.874,32.062,33.646,23.188,55.332C290.809,465.562,266.037,475.946,244.351,467.065z M573.846,166.614l-10.819-33.361 l-46.124,4.393c-2.951-4.114-6.256-7.901-9.799-11.417l11.614-44.907l-31.246-15.939l-29.546,35.761 c-4.924-0.809-9.928-1.258-14.994-1.231L419.417,59.99l-33.36,10.819l4.393,46.124c-4.114,2.951-7.901,6.256-11.417,9.799 l-44.907-11.614l-15.939,31.246l35.761,29.546c-0.809,4.923-1.258,9.928-1.23,14.994L312.8,214.411l10.819,33.361l46.124-4.393 c2.951,4.114,6.249,7.901,9.799,11.417l-11.614,44.907l31.246,15.939l29.546-35.761c4.923,0.809,9.928,1.258,14.994,1.23 l23.515,39.923l33.36-10.819l-4.393-46.124c4.114-2.951,7.901-6.256,11.417-9.799l44.907,11.614l15.939-31.246l-35.762-29.546 c0.81-4.923,1.258-9.928,1.231-14.994L573.846,166.614z M456.852,232.214c-23.032,7.473-47.764-5.148-55.23-28.179 c-7.473-23.032,5.148-47.764,28.18-55.23c23.031-7.473,47.764,5.148,55.229,28.179 C492.497,200.016,479.883,224.747,456.852,232.214z"></path> </g> </g></svg></span>
+          </span></h2>
+        </header>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Languages</span>
+          <span class="resume-item-copy">: French (native), English (proficient)<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Scientific software</span>
+          <span class="resume-item-copy">: VMD, PyMol, APBS, GROMACS, NAMD, HADDOCK, Desmos, AutoDock, Chimera, HADDOCK<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Communication</span>
+          <span class="resume-item-copy">: Apple/Microsoft office suites, Website design (HTML/CSS), Authorea, \(\LaTeX\)<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Programming languages</span>
+          <span class="resume-item-copy">: Python3, \(\verb!C++11!\), \(\verb!C#!\), Bash, \(\verb!C!\), Unix, HTML, CSS<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Development tools</span>
+          <span class="resume-item-copy">: git, conda, Docker, gdb, lldb, CMake, Unity, Pixlr E, Jekyll, MongoDB, Streamlit<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">OS</span>
+          <span class="resume-item-copy">: macOS, Linux<br/></span>
+        </div>
+        
+
+      </section>
+      <!-- end Skills -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -PUBLICATIONS---------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin publications -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Publications & scientific production <span class="emoji" style="transform: translateY(1px);"><svg fill="#6F4E37" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" stroke="#6F4E37" stroke-width="1.2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.5 2c-.276.004-.504.224-.5.5v4c0 .815.656 1.5 1.47 1.5h4.03c.67 0 .654-1 0-1h-4.03c-.26 0-.47-.207-.47-.5v-4c.004-.282-.218-.504-.5-.5zM8.47 0C7.657 0 7 .685 7 1.5v23c0 .815.656 1.5 1.47 1.5h17.06c.814 0 1.47-.685 1.47-1.5v-18c0-.133-.053-.26-.146-.354l-6-6C20.76.053 20.634 0 20.5 0zm0 1h11.823L26 6.707V24.5c0 .293-.21.5-.47.5H8.47c-.26 0-.47-.207-.47-.5v-23c0-.293.21-.5.47-.5zm-4 3C3.657 4 3 4.685 3 5.5v23c0 .815.656 1.5 1.47 1.5h17.06c.814 0 1.47-.685 1.47-1.5v-1c.01-.676-1.01-.676-1 0v1c0 .293-.21.5-.47.5H4.47c-.26 0-.47-.207-.47-.5v-23c0-.293.21-.5.47-.5h1.06c.675.01.675-1.01 0-1z"></path></g></svg></span></h2>
+        </header>
+
+        <h4 class="resume-item-title" id="publications">Publications:</h4>
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" id="[4]">
+          <h4 class="resume-item-publications" itemprop="description"> [4] Lanrezac A, Férey N, Baaden M. "<i>Interactive Molecular Dynamics</i>" Reference Module in Chemistry, Molecular Sciences and Chemical Engineering (2023) DOI: <a href="https://doi.org/10.1016/B978-0-12-821978-2.00115-X" itemprop="url">10.1016/B978-0-12-821978-2.00115-X</a></h4>
+        </div>
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" id="[3]">
+          <h4 class="resume-item-publications" itemprop="description"> [3] Lanrezac A, Baaden M. "<i>UNILIPID, a Methodology for Energetically Accurate Prediction of Protein Insertion into Implicit Membranes of Arbitrary Shape</i>" Membranes (2023) DOI: <a href="https://doi.org/10.3390/membranes13030362" itemprop="url">10.3390/membranes13030362</a></h4>
+        </div>
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" id="[2]">
+          <h4 class="resume-item-publications" itemprop="description"> [2] Lanrezac A, Laurent B, Santuz H, Férey N, Baaden M. "<i>Fast and Interactive Positioning of Proteins within Membranes</i>" Algorithms (2022) DOI: <a href="https://doi.org/10.3390/a15110415" itemprop="url">10.3390/a15110415</a></h4>
+        </div>
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" id="[1]">
+          <h4 class="resume-item-publications" itemprop="description"> [1] Lanrezac A, Férey N, Baaden M. "<i>Wielding the power of interactive molecular simulations</i>" WIREs Comput Mol Sci (2021) DOI: <a href="https://doi.org/10.1002/wcms.1594" itemprop="url">10.1002/wcms.1594</a></h4>
+        </div>
+        
+
+        <h4 class="resume-item-title" id="posters">Poster:</h4>
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <h4 class="resume-item-publications" itemprop="description"> (1) Lanrezac A, Férey N, Baaden M. "<i>Combining human interaction and empirical data using interactive elastic network models</i>" EMBO Workshop: Advances and Challenges in Biomolecular Simulations (2021)<span class="no-print"> : <a href="images/EMBO_Poster.pdf" itemprop="url">Poster</a>, <a href="images/EMBO_Poster_Abstract.pdf">Abstract</a></span></h4>
+        </div>
+        
+
+      </section>
+      <!-- end publications -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -PROJECTS-------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -RECOGNITION----------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -ASSOCIATIONS---------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -SOFTWARES------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin softwares -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Softwares & Tools <span class="emoji" style="transform: translateY(4px); min-height: 25px; min-width: 25px;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0834 3.75H3.75V20.25H6.75H8.25H15.75H17.25H20.25V6.91661L17.0834 3.75ZM15.75 18.75H8.25L8.25 13.5L15.75 13.5V18.75ZM17.25 12L17.25 18.75H18.75V7.53793L16.5 5.28793V9.75H7.5V5.25H5.25V18.75H6.75L6.75 12L17.25 12ZM15 5.25H9V8.25H15V5.25ZM14.25 6H12.75V7.5H14.25V6Z" fill="#6F4E37"></path> </g></svg></span></h2>
+        </header>
+
+        <div class="executive-summary" itemprop="description">
+          <p>
+  I pursued the development of BioSpring, UnityMol and MDDriver during my thesis, and they are currently my side project.
+  These are projects developed by Marc Baaden's team at the Theoretical Biochemistry Laboratory.
+</p>
+        </div>
+
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="André Lanrezac" itemtype="http://schema.org/Person" />
+
+          <div class="resume-item">
+            <span class="resume-item-software">• BioSpring</span>
+            <span class="resume-item-copy">: Interactive simulation engine based on an extended elastic network model</span>
+            <h4 class="resume-item-details" itemprop="description">Developer  &bull; 2019 &mdash; 2024 &bull; \(\verb!C++11!\)</h4>
+        </div>
+          </div>
+
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="André Lanrezac" itemtype="http://schema.org/Person" />
+
+          <div class="resume-item">
+            <span class="resume-item-software">• UnityMol</span>
+            <span class="resume-item-copy">: Molecular viewer</span>
+            <h4 class="resume-item-details" itemprop="description">Developer  &bull; 2019 &mdash; 2024 &bull; \(\verb!C#!\)</h4>
+        </div>
+          </div>
+
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="André Lanrezac" itemtype="http://schema.org/Person" />
+
+          <div class="resume-item">
+            <span class="resume-item-software">• MDDriver</span>
+            <span class="resume-item-copy">: Socket for data communication</span>
+            <h4 class="resume-item-details" itemprop="description">Developer  &bull; 2019 &mdash; 2024 &bull; \(\verb!C!\)</h4>
+        </div>
+          </div>
+
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="André Lanrezac" itemtype="http://schema.org/Person" />
+
+          <div class="resume-item">
+            <span class="resume-item-software">• LIPTUNE</span>
+            <span class="resume-item-copy">: <i><b>L</b>everaging <b>I</b>MPALA <b>P</b>arameterization <b>T</b>echnique <b>U</b>sing <b>N</b>ew <b>E</b>nergies</i> <a href="#" data-scroll-to="publications">[4]</a>. The tool tests 4 methods to calibrate each amino acid and obtain a set of hydrophobicity parameters to improve protein insertion with the <a href="https://doi.org/10.1002/(SICI)1097-0134(19980301)30:4<357::AID-PROT3>3.0.CO;2-G">IMPALA</a> membrane analytical model.  The approach can be used for any type of representation, from atomic to coarse-grained scales.
+</span>
+            <h4 class="resume-item-details" itemprop="description">Designer & Developer  &bull; 2023 &bull; Python3</h4>
+        </div>
+          </div>
+
+        
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+          <meta itemprop="creator" content="André Lanrezac" itemtype="http://schema.org/Person" />
+
+          <div class="resume-item">
+            <span class="resume-item-software">• AlimBDD</span>
+            <span class="resume-item-copy">: Side project application that performs detailed nutritional analysis by  inventorying food products and analyzing their nutrients. The app provides  users with a scientific overview of their dietary intake and allows for  experimental combinations of foods to optimize nutritional value.
+</span>
+            <h4 class="resume-item-details" itemprop="description">Designer & Developer  &bull; 2024 &mdash; Now &bull; Python3, MongoDB, Streamlit</h4>
+        </div>
+          </div>
+
+        
+
+      </section>
+      <!-- end softwares -->
+      
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- -INTERESTS------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------- -->
+      
+      <!-- begin Interests -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Outside Interests <span class="emoji" style="transform: translateY(4px);"><svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#6F4E37" stroke="#6F4E37" stroke-width="15.36"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#6F4E37;} </style> <g> <path class="st0" d="M100.807,213.441c-5.014,0-9.08,4.066-9.08,9.08c0,5.014,4.066,9.07,9.08,9.07c5.015,0,9.08-4.056,9.08-9.07 C109.887,217.507,105.822,213.441,100.807,213.441z"></path> <path class="st0" d="M449.433,436.201c1.488-3.446,2.367-7.492,2.357-11.907c0.01-4.295-0.738-8.311-2.107-11.887 c-1.188-3.127-2.817-5.914-4.685-8.331c-3.276-4.245-7.212-7.412-11.038-10.039c-2.878-1.978-5.724-3.647-8.292-5.185 c-3.866-2.277-7.122-4.325-8.84-5.973c-0.859-0.8-1.329-1.448-1.538-1.848c-0.08-0.15-0.11-0.25-0.14-0.36l-0.17-1.528v-0.02 c-0.07-0.729-1.628-15.723-1.628-37.69c0-25.023,2.038-59.126,10.349-91.332c5.963-23.145,8.621-44.632,8.621-64.411 c0.01-26.321-4.735-49.627-12.627-69.695c-11.837-30.128-30.736-52.952-51.185-68.277c-10.229-7.672-20.848-13.465-31.256-17.391 c-10.409-3.916-20.608-5.964-30.098-5.964c-0.7,0-1.389,0.031-2.078,0.06c-1.588-2.168-3.806-4.955-6.644-7.921 c-2.996-3.137-6.662-6.464-11.028-9.38c-4.375-2.918-9.47-5.424-15.273-6.723c-1.219-0.27-2.448-0.4-3.647-0.4 c-2.138-0.01-4.175,0.409-6.024,1.079c-3.486,1.278-6.303,3.346-8.781,5.704c-4.314,4.175-7.781,9.389-10.898,14.983 c-4.645,8.372-8.361,17.601-10.998,24.834c-1.319,3.636-2.358,6.752-3.077,8.97c-7.831,3.836-15.463,8.921-22.875,14.644 c-12.726,9.83-24.774,21.577-35.402,32.355c-5.295,5.384-10.239,10.539-14.664,15.074c-4.435,4.505-8.372,8.41-11.548,11.228 l-0.16,0.15l-0.16,0.159c0,0-0.958,0.95-2.656,2.637c-5.965,5.904-20.998,20.768-35.612,35.053 c-7.312,7.152-14.514,14.155-20.408,19.808c-2.937,2.817-5.554,5.304-7.682,7.292c-2.118,1.977-3.786,3.486-4.645,4.215 c-4.186,3.526-7.391,7.512-9.529,11.787c-2.138,4.286-3.167,8.851-3.157,13.276c0,5.194,1.369,10.149,3.646,14.564 c3.427,6.634,8.821,12.147,15.294,16.103c6.493,3.946,14.146,6.374,22.237,6.374c1.468,0,2.956-0.1,4.435-0.27 c0.359,1.987,0.979,3.896,1.838,5.674c2.038,4.175,5.234,7.701,9.27,10.298c4.035,2.588,8.971,4.216,14.344,4.206 c4.745,0.009,9.77-1.299,14.485-4.046c6.812-3.966,13.126-8.682,20.427-12.507c7.323-3.826,15.494-6.862,26.203-7.651 c7.212-0.52,14.324-1.459,21.146-2.758c-0.189,3.016-0.698,5.904-1.548,8.801c-1.828,6.323-5.234,12.736-9.62,19.829 c-6.542,10.648-15.214,22.706-22.395,38.359c-7.183,15.633-12.746,34.892-13.276,59.606v0.21c0,0.24-0.03,0.39-0.08,0.55 c-0.09,0.3-0.3,0.779-0.979,1.548c-0.599,0.659-1.528,1.478-2.757,2.388c-2.157,1.578-5.175,3.346-8.51,5.344 c-5.015,3.018-10.849,6.564-15.783,11.998c-2.457,2.706-4.666,5.944-6.224,9.73c-1.559,3.775-2.427,8.07-2.427,12.696 c-0.02,5.903,1.558,11.098,4.016,15.184c1.838,3.056,4.096,5.494,6.393,7.392c1.468,1.209,2.936,2.178,4.354,3.016l-11.357,19.13 V512h315.051v-42.983l-11.348-19.11c2.148-1.268,4.435-2.926,6.613-5.114C445.876,442.535,447.954,439.678,449.433,436.201z M190.39,337.467c6.294-17.681,15.504-30.907,23.715-43.873c4.096-6.473,7.951-12.906,10.868-19.878 c2.918-6.942,4.835-14.505,4.825-22.756c0-0.57-0.03-1.14-0.05-1.698c1.488-0.46,2.957-0.949,4.396-1.448 c6.133-2.148,11.696-4.676,16.502-7.672c4.805-3.008,8.91-6.454,11.887-10.868l-13.465-8.981c-1.119,1.729-3.467,3.966-6.973,6.124 c-5.224,3.276-12.866,6.373-21.697,8.72c-8.86,2.337-18.93,3.996-29.168,4.725c-13.266,0.929-23.935,4.915-32.565,9.47 c-8.64,4.555-15.394,9.609-21.007,12.826c-2.448,1.409-4.525,1.858-6.384,1.878c-1.398,0-2.707-0.289-3.916-0.769 c-1.797-0.729-3.346-1.987-4.335-3.316c-1.019-1.339-1.379-2.668-1.369-3.437c0.01-0.568,0.111-0.899,0.41-1.368l-0.62-0.41 c1.079-0.639,2.148-1.318,3.177-2.078c2.218-1.618,5.754-3.936,9.689-6.414c5.924-3.725,12.826-7.871,18.221-11.058 c2.696-1.608,5.024-2.967,6.672-3.926c0.819-0.48,1.478-0.86,1.918-1.119c0.45-0.26,0.69-0.399,0.69-0.399l-8.081-14.006 c-0.031,0.02-7.032,4.056-15.324,9.03c-4.146,2.498-8.611,5.204-12.707,7.792c-4.105,2.578-7.811,4.995-10.588,7.013 c-4.485,3.247-9.071,4.534-13.725,4.555c-3.196,0-6.424-0.66-9.45-1.848c-4.555-1.788-8.63-4.824-11.378-8.291 c-1.378-1.738-2.447-3.566-3.136-5.384c-0.69-1.818-1.039-3.606-1.048-5.354c0.019-1.998,0.439-3.956,1.478-6.054 c1.039-2.088,2.737-4.345,5.474-6.653c1.479-1.258,3.536-3.146,6.234-5.654c9.31-8.751,25.702-24.774,39.817-38.649 c13.376-13.146,24.654-24.334,25.803-25.462c4.905-4.385,10.498-10.129,16.792-16.593c9.529-9.829,20.578-21.297,32.105-31.496 c11.528-10.219,23.585-19.119,34.543-23.894l3.476-1.509l1.049-3.636l0.009-0.03c0.161-0.589,4.056-13.665,9.81-26.122 c2.847-6.213,6.214-12.277,9.43-16.272c1.578-2.018,3.127-3.477,4.255-4.246c0.58-0.38,1.019-0.589,1.318-0.699 c0.3-0.1,0.44-0.11,0.52-0.11l0.12,0.01h0.021c3.376,0.75,6.703,2.318,9.81,4.385c4.654,3.098,8.71,7.292,11.487,10.69 c1.389,1.698,2.467,3.186,3.177,4.215c0.359,0.519,0.619,0.918,0.779,1.178l0.18,0.279l0.02,0.04l2.696,4.496l5.194-0.629 c1.639-0.19,3.377-0.3,5.185-0.3c9.5-0.02,21.278,2.847,33.394,8.84c18.211,8.981,37.16,24.884,51.485,47.569 c14.305,22.696,24.105,52.164,24.124,88.745c0,18.32-2.487,38.439-8.121,60.366c-8.81,34.234-10.849,69.476-10.849,95.377 c0,12.956,0.52,23.545,0.979,30.488h-22.885c-3.476-14.954-4.884-29.658-4.884-44.173c-0.01-25.122,4.186-49.676,8.881-73.551 c4.675-23.885,9.869-47.07,11.497-69.675v-0.01c0.17-2.458,0.26-4.955,0.26-7.502c0-11.897-1.888-24.763-5.854-37.499 c-5.953-19.08-16.572-37.97-32.855-52.274c-8.141-7.142-17.71-13.106-28.679-17.251c-10.948-4.146-23.296-6.473-36.931-6.463 v16.172c15.754,0.01,28.859,3.526,39.887,9.33c8.281,4.366,15.404,10.04,21.478,16.662c9.11,9.919,15.842,21.956,20.258,34.453 c4.435,12.487,6.533,25.422,6.523,36.87c0,2.178-0.08,4.295-0.22,6.363v-0.009c-1.478,20.907-6.483,43.593-11.238,67.717 c-4.735,24.134-9.18,49.737-9.19,76.668c0,14.375,1.298,29.119,4.495,44.173H183.299 C184.297,358.535,186.894,347.288,190.39,337.467z M432.211,495.827H149.514v-22.366l11.838-19.938h259.032l11.828,19.938V495.827z M433.889,431.176c-0.748,1.259-1.717,2.318-2.817,3.237c-1.658,1.389-3.626,2.368-5.144,2.957c-0.22,0.09-0.409,0.15-0.6,0.22 v-0.239H156.667v0.34c-0.34-0.121-0.7-0.251-1.119-0.41c-1.958-0.789-4.525-2.218-6.313-4.216 c-0.899-1.008-1.639-2.128-2.197-3.506c-0.54-1.378-0.92-3.036-0.93-5.264c0.01-2.477,0.41-4.425,1.06-6.154 c0.569-1.518,1.348-2.867,2.367-4.195c1.778-2.308,4.326-4.475,7.382-6.573c2.287-1.568,4.825-3.077,7.422-4.626 c3.906-2.348,7.951-4.685,11.588-8.041c1.798-1.668,3.516-3.666,4.834-6.154c0.08-0.15,0.13-0.309,0.2-0.46h219.814 c0.909,1.838,2.048,3.456,3.286,4.846c1.628,1.808,3.406,3.296,5.234,4.635c3.196,2.327,6.554,4.245,9.77,6.173 c4.815,2.867,9.23,5.764,12.077,8.961c1.438,1.598,2.518,3.216,3.266,5.034c0.75,1.828,1.199,3.895,1.209,6.553 C435.597,427.451,434.888,429.478,433.889,431.176z"></path> </g> </g></svg></span></h2>
+        </header>
+
+        <!-- <div class="resume-item">
+          <ul class="resume-item-list">
+            
+            <li>Climbing (boudering), badminton, cycling</li>
+            
+            <li>Music (funk, new-disco, electronic, trip hop, classical), science (physics, astronomy), computer science (qualified in Google CodeJam 2022), coffee enthusiast, chess.</li>
+            
+          </ul>
+        </div> -->
+
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Sport</span>
+          <span class="resume-item-copy">: Climbing (boudering), badminton, cycling<br/></span>
+        </div>
+        
+        <div class="resume-item">
+          <span class="resume-item-title">Miscellaneous</span>
+          <span class="resume-item-copy">: Music (funk, new-disco, electronic, trip hop, classical), science (physics, astronomy), computer science (qualified in Google CodeJam 2022), coffee enthusiast, chess.<br/></span>
+        </div>
+        
+
+      </section>
+      <!-- end Interests -->
+      
+
+      
+
+      
+      <!-- begin Print Social Links -->
+      <section class="content-section print-only">
+
+        <header class="section-header">
+          <h2>Social Links</h2>
+        </header>
+
+        <div class="resume-item">
+        <!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
+
+<ul>
+
+  <!-- GitHub link -->
+  
+  <li><strong>Github</strong>: https://github.com/lanzac</li>
+  
+
+  <!-- Twitter link -->
+  
+
+  <!-- Dribbble link -->
+  
+
+  <!-- Facebook link -->
+  
+
+  <!-- LinkedIn link -->
+  
+  <li><strong>LinkedIn</strong>: https://www.linkedin.com/in/andre-lanrezac</li>
+  
+
+  <!-- Instagram link -->
+  
+
+  <!-- Website link -->
+  
+
+  <!-- ResearchGate link -->
+  
+  <li><strong>ResearchGate</strong>: https://www.researchgate.net/profile/Andre-Lanrezac</li>
+  
+
+  <!-- Mail link -->
+  
+  <li><strong>Mail</strong>: a.lanrezac@gmail.com</li>
+  
+
+  <!-- Telephone link -->
+  
+
+</ul>
+
+
+        </div>
+
+      </section>
+      <!-- end Print Social Links -->
+      
+
+      <div class="lang-switcher"><div class="no-print">
+
+
+
+    EN
+
+
+
+
+    
+        <a href=" /cv/fr-fr/" target="_self">FR</a>
+    
+
+
+</div></div>
+
+
+      <footer class="page-footer">
+        <span class="footer-line no-print">Last update on </span>
+        <span class="footer-line print-only">Version dated </span>
+        <span class="footer-line" id="commitDate">...Loading last commit date...</span>
+        <p class="footer-line no-print">I used the super template made by <a href="http://twitter.com/jglovier">@jglovier</a> and forked on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
+        <p class="footer-line no-print">A simple Jekyll + GitHub Pages powered resume template.</p>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>
