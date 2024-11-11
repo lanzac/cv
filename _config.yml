@@ -41,7 +41,7 @@ parallel_localization: true
 baseurl: "/cv"
 
 # Resume settings
-resume_avatar:                  "true"
+resume_avatar:                  "false"
 resume_name:                    "André Lanrezac"
 resume_title:                   "Curriculum vitæ"
 display_resume_title:           "false"
