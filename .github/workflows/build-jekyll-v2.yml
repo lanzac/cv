@@ -1,66 +1,116 @@
-name: Build and Deploy to Github Pages
+name: Build Jekyll page, generate PDF, and deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build_and_deploy:
+  # Job 1: Build and verify Jekyll site with 'test' provider
+  build_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - uses: actions/cache@v2
+      - name: Build with Jekyll (Test)
+        uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
-          path: _vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          provider: 'test'                 # Use 'test' provider to build the site without deploying
+          jekyll_src: './'                 # Jekyll source directory
+          jekyll_cfg: '_config.yml'        # Jekyll configuration file
+          ruby_ver: '3.2.2'                 # Ruby version
+          bundler_ver: '2.4.19'             # Bundler version
 
+      - name: Verify _site Directory
+        run: |
+          if [ ! -d "_site" ]; then
+            echo "Error: _site directory not found!"
+            exit 1
+          fi
 
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.6.0
+      - name: Upload _site as artifact
+        uses: actions/upload-artifact@v3
         with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: 'lanzac/cv'
-          branch: 'gh-pages'         # Default is gh-pages for github provider
-          jekyll_src: './'           # Default is root directory
-          jekyll_cfg: '_config.yml'  # Default is _config.yml
-          ruby_ver: '3.2.2'
-          bundler_ver: '2.4.19'         # Default is latest bundler version
-          pre_build_commands: ''     # Installing additional dependencies (Arch Linux) 
+          name: site_files
+          path: _site
 
-      # Generate the PDF for en-us
-      - name: en-us_pdf
+  # Job 2: Generate PDFs from the built site
+  generate_pdf:
+    runs-on: ubuntu-latest
+    needs: build_test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download site artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: site_files
+          path: _site
+
+      - name: List _site contents
+        run: ls -R _site
+
+      # Generate the PDF in English
+      - name: Generate en-us PDF
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: _site/index.html
           outputFile: _site/resume_en-us.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
-      # Generate the PDF for fr-fr
-      - name: fr-fr_pdf
+      # Generate the PDF in French
+      - name: Generate fr-fr PDF
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: _site/fr-fr/index.html
-          outputFile: _site/resume_fr-fr.pdf
+          outputFile: _site/fr-fr/resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.6.0
+      - name: Upload updated _site with PDFs
+        uses: actions/upload-artifact@v3
         with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: 'lanzac/cv'
-          branch: 'gh-pages'         # Default is gh-pages for github provider
-          jekyll_src: './'           # Default is root directory
-          jekyll_cfg: '_config.yml'  # Default is _config.yml
-          ruby_ver: '3.2.2'
-          bundler_ver: '2.4.19'         # Default is latest bundler version
-          pre_build_commands: ''     # Installing additional dependencies (Arch Linux) 
+          name: site_with_pdfs
+          path: _site
 
+  # Job 3: Deploy the site with PDFs to GitHub Pages
+  deploy:
+    runs-on: ubuntu-latest
+    needs: generate_pdf
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download site with PDFs
+        uses: actions/download-artifact@v3
+        with:
+          name: site_with_pdfs
+          path: _site
+
+      - name: List _site contents after PDFs
+        run: ls -R _site
+
+      - name: Deploy to GitHub Pages
+        uses: jeffreytse/jekyll-deploy-action@v0.6.0
+        with:
+          provider: 'github'                # Use 'github' provider to deploy to GitHub Pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: 'lanzac/cv'           # Replace with your own repository
+          branch: 'gh-pages'                # Deployment branch
+          jekyll_src: '_site'               # Jekyll source directory for deployment
+          jekyll_cfg: '_config.yml'         # Jekyll configuration file
+          ruby_ver: '3.2.2'                  # Ruby version
+          bundler_ver: '2.4.19'              # Bundler version
