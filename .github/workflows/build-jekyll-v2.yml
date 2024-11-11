@@ -47,7 +47,7 @@ jobs:
         uses: fifsky/html-to-pdf-action@master
         with:
           htmlFile: _site/fr-fr/index.html
-          outputFile: _site/fr-fr/resume_fr-fr.pdf
+          outputFile: _site/resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Upload artifact
