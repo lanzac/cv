@@ -40,6 +40,7 @@ jobs:
 
   pdf:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: en-us_pdf
         uses: fifsky/html-to-pdf-action@master
@@ -54,3 +55,21 @@ jobs:
           htmlFile: _site/fr-fr/index.html
           outputFile: resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      - name: Upload updated site artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: [build, pdf]
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
