@@ -87,6 +87,22 @@ jobs:
           user_name: 'lanzac'
           commit_message: 'Update fr-fr pdf cv'
       
+
+      - name: Send pdfs to main site assets
+        uses: actions/checkout@v4
+        with:
+          repository: 'lanzac/lanzac.github.io'
+          token: ${{ secrets.CV_SYNC_TOKEN }}
+        run: |
+          cp _site/resume_en-us.pdf lanzac.github.io/assets/pdf/en-us
+          cp _site/fr-fr/resume_fr-fr.pdf lanzac.github.io/assets/pdf/fr-fr
+          cd lanzac.github.io
+          git config --global user.name 'lanzac'
+          git config --global user.email 'a.lanrezac@gmail.com'
+          git add assets/pdf/en-us/resume_en-us.pdf assets/pdf/fr-fr/resume_fr-fr.pdf
+          git commit -m "Update pdf cv"
+          git push
+
   #     - name: Upload artifact
   #       # Automatically uploads an artifact from the './_site' directory by default
   #       uses: actions/upload-pages-artifact@v3
