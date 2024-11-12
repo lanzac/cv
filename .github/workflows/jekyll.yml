@@ -63,31 +63,6 @@ jobs:
           outputFile: _site/fr-fr/resume_fr-fr.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
       
-      - name: Push en-us pdf cv to main site assets
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: '_site/resume_en-us.pdf'
-          destination_repo: 'lanzac/lanzac.github.io'
-          destination_folder: 'assets/pdf/en-us'
-          user_email: 'a.lanrezac@gmail.com'
-          user_name: 'lanzac'
-          commit_message: 'Update en-us pdf cv'
-
-      - name: Push fr-fr pdf cv to main site assets
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: '_site/fr-fr/resume_fr-fr.pdf'
-          destination_repo: 'lanzac/lanzac.github.io'
-          destination_folder: 'assets/pdf/fr-fr'
-          user_email: 'a.lanrezac@gmail.com'
-          user_name: 'lanzac'
-          commit_message: 'Update fr-fr pdf cv'
-      
-
       - name: Send pdfs to main site assets
         uses: actions/checkout@v4
         with:
