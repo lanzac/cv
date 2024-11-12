@@ -69,7 +69,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: '_site/resume_en-us.pdf'
-          destination_repo: 'lanzac.github.io'
+          destination_repo: 'lanzac/lanzac.github.io'
           destination_folder: 'assets/pdf/en-us'
           user_email: 'a.lanrezac@gmail.com'
           user_name: 'lanzac'
@@ -81,7 +81,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: '_site/fr-fr/resume_fr-fr.pdf'
-          destination_repo: 'lanzac.github.io'
+          destination_repo: 'lanzac/lanzac.github.io'
           destination_folder: 'assets/pdf/fr-fr'
           user_email: 'a.lanrezac@gmail.com'
           user_name: 'lanzac'
