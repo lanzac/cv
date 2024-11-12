@@ -93,7 +93,7 @@ jobs:
         with:
           repository: 'lanzac/lanzac.github.io'
           token: ${{ secrets.CV_SYNC_TOKEN }}
-        run: |
+      - run: |
           cp _site/resume_en-us.pdf lanzac.github.io/assets/pdf/en-us
           cp _site/fr-fr/resume_fr-fr.pdf lanzac.github.io/assets/pdf/fr-fr
           cd lanzac.github.io
